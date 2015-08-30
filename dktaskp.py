@@ -36,5 +36,5 @@ while True:
         rq.put(json.dumps(info,ensure_ascii=False))
     if len(rjson)>0:
         lasttime=rjson[0]['created_at']
-    time.sleep(5)
+    time.sleep(30)
 

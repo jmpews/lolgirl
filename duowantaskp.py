@@ -13,7 +13,9 @@ purl="http://bbs.duowan.com/forum.php?mod=forumdisplay&fid=1343&orderby=dateline
 t_start=int(time.time())
 rq=RedisQueue('dwgirl')
 
-for i in range(1,4):
+i=0
+while True:
+    i=i+1
     requesturl=purl % (i)
     r=requests.get(requesturl)
 
