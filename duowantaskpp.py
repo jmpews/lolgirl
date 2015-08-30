@@ -38,7 +38,12 @@ def func():
     def checkid(id):
         qurl='http://x.15w.com/json.php?tn=search&q=%s' % (id)
         r=requests.get(qurl)
-        rj=json.loads(r.text[1:-2])
+        try:
+            rj=json.loads(r.text[1:-2])
+        except Exception as e:
+            print(e)
+            print(r.text)
+            return
         if rj['code']==1:
             return False
         rjsarray=rj['data']
