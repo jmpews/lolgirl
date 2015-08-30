@@ -77,8 +77,8 @@ def func():
     girlinfo.update(idinfo_15w)
 
     # 保存图片url
-    if len(pics)>2:
-        pics=pics[:2]
+    if len(pics)>5:
+        pics=pics[:5]
     piclist=[utils.quote_url(pic.attrs['zoomfile']) for pic in pics]
     girlinfo['picurls']=piclist
 

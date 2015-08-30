@@ -18,6 +18,7 @@ i=0
 while True:
     i=i+1
     requesturl=purl % (i)
+    print('=====Page.',i,'=====')
     r=requests.get(requesturl)
 
     # 使用BeautifulSoup
