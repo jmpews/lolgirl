@@ -22,7 +22,8 @@ def func():
     r=requests.get(girlurl)
     soup=BeautifulSoup(r.text,"html.parser")
     girlpage=soup.find('td',id=re.compile('postmessage.*'),attrs={'class':'t_f'})
-
+    if not girlpage:
+        return
     IDkeys=['ID','id']
     # Zonekeys={'电一':'艾欧尼亚','艾欧尼亚':'艾欧尼亚','电二':'祖安','电三':'诺克萨斯','诺克萨斯':'诺克萨斯','电六':'战争学院','战争学院':'战争学院','电四':'班德尔城','班德尔城':'班德尔城','电五':'皮尔特沃夫','皮尔特沃夫':'皮尔特沃夫','巨神峰':'巨神峰'}
     # 提取妹纸id

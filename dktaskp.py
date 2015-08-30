@@ -19,6 +19,7 @@ girlurl='http://api.gz.1251328275.cee.myqcloud.com/pic.php?s=m&sort=new&p=1'
 
 lasttime=int(time.time())-3600*24
 while True:
+    print('one loop ...')
     r=requests.get(girlurl)
     rjson=json.loads(r.text[1:-1])
     ids=[]
@@ -34,5 +35,5 @@ while True:
         rq.put(json.dumps(info,ensure_ascii=False))
     if len(rjson)>0:
         lasttime=rjson[0]['created_at']
-    time.sleep(30)
+    time.sleep(5)
 

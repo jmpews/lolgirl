@@ -31,6 +31,7 @@ def func():
     girlid=rq_girl.get().decode()
     girlid=json.loads(girlid)
     idinfo_dk=checkid(girlid['id'],girlid['area_name'])
+    print(idinfo_dk)
     if not idinfo_dk:
         return
     girlinfo={}
