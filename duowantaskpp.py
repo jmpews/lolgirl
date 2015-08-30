@@ -41,6 +41,8 @@ def func():
         try:
             rj=json.loads(r.text[1:-2])
         except Exception as e:
+            print(qurl)
+            print('----------------------')
             print(e)
             print(r.text)
             return
