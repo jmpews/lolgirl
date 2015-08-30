@@ -3,12 +3,12 @@ import logging
 def initLogging(logFilename='run.log'):
     """Init for logging
     """
-    logging.basicConfig(
-        level = logging.NOTSET,
-        format = 'LINE %(lineno)-4d  %(levelname)-8s %(message)s',
-        datefmt = '%m-%d %H:%M',
-        filename = logFilename,
-        filemode = 'w')
+    # logging.basicConfig(
+    #     level = logging.NOTSET,
+    #     format = 'LINE %(lineno)-4d  %(levelname)-8s %(message)s',
+    #     datefmt = '%m-%d %H:%M',
+    #     filename = logFilename,
+    #     filemode = 'w')
 
     logger=logging.getLogger()
     formatter = logging.Formatter('LINE %(lineno)-4d : %(levelname)-8s %(message)s')
@@ -22,3 +22,4 @@ def initLogging(logFilename='run.log'):
 
     logger.addHandler(console)
     logger.addHandler(logfile)
+    return logger

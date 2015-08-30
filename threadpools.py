@@ -3,7 +3,7 @@ import threading
 from logger import initLogging
 
 # log file
-initLogging('threadpool.log')
+loggg=initLogging('threadpool.log')
 
 class ThreadPool(object):
     def __init__(self,func=None,thread_num=5):
@@ -36,7 +36,9 @@ class Worker(threading.Thread):
             try:
                 self.func()
             except Exception as e:
-                print(e)
+                loggg.error(e)
+                import traceback
+                traceback.print_exc()
             print(self.name)
 
 def test():
