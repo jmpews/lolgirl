@@ -17,7 +17,7 @@ rq_girl=RedisQueue('dwgirl')
 rq_info=RedisQueue('girlinfo')
 testurl='http://bbs.duowan.com/forum.php?mod=viewthread&tid=43501017&extra=page%3D1%26filter%3Dauthor%26orderby%3Ddateline%26typeid%3D3317%26typeid%3D3317%26orderby%3Ddateline'
 
-initLogging('dwtaskpp.log')
+loggg=initLogging('dwtaskpp.log')
 
 def func():
     # 找到第一篇帖子内容
@@ -37,15 +37,17 @@ def func():
     # 检查id是否存在
     def checkid(id):
         qurl='http://x.15w.com/json.php?tn=search&q=%s' % (id)
-        r=requests.get(qurl)
         try:
-            rj=json.loads(r.text[1:-2])
+            r=requests.get(qurl,timeout=4)
         except Exception as e:
-            print(qurl)
-            print('----------------------')
-            print(e)
-            print(r.text)
+            loggg.error(e)
+            import traceback
+            traceback.print_exc()
+            print('================ID 异常======================')
+            return False
+        if r.text.find('code')==-1:
             return
+        rj=json.loads(r.text[1:-2])
         if rj['code']==1:
             return False
         rjsarray=rj['data']
