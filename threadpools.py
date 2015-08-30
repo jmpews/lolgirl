@@ -1,9 +1,9 @@
 __author__ = 'jmpews'
 import threading
-
+from logger import initLogging
 
 # log file
-# logger.initLogging('threadpool.log')
+initLogging('threadpool.log')
 
 class ThreadPool(object):
     def __init__(self,func=None,thread_num=5):
@@ -33,7 +33,10 @@ class Worker(threading.Thread):
             print('Do Nothing...')
             return
         while True:
-            self.func()
+            try:
+                self.func()
+            except Exception as e:
+                print(e)
             print(self.name)
 
 def test():

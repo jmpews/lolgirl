@@ -4,13 +4,21 @@ def initLogging(logFilename='run.log'):
     """Init for logging
     """
     logging.basicConfig(
-        level = logging.DEBUG,
+        level = logging.NOTSET,
         format = 'LINE %(lineno)-4d  %(levelname)-8s %(message)s',
         datefmt = '%m-%d %H:%M',
         filename = logFilename,
         filemode = 'w')
-    console = logging.StreamHandler()
-    console.setLevel(logging.INFO)
+
+    logger=logging.getLogger()
     formatter = logging.Formatter('LINE %(lineno)-4d : %(levelname)-8s %(message)s')
+    logfile=logging.FileHandler(logFilename)
+    logfile.setLevel(logging.NOTSET)
+    logfile.setFormatter(formatter)
+
+    console = logging.StreamHandler()
+    console.setLevel(logging.NOTSET)
     console.setFormatter(formatter)
-    logging.getLogger('').addHandler(console)
+
+    logger.addHandler(console)
+    logger.addHandler(logfile)

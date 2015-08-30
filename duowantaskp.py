@@ -5,6 +5,7 @@ import time
 import requests
 import utils
 from redisq import RedisQueue
+from logger import initLogging
 
 pre_url=r"http://bbs.duowan.com/"
 purl="http://bbs.duowan.com/forum.php?mod=forumdisplay&fid=1343&orderby=dateline&typeid=3317&orderby=dateline&typeid=3317&filter=author&page=%s"

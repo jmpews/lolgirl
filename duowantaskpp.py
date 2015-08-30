@@ -11,10 +11,13 @@ import requests
 from redisq import RedisQueue
 from threadpools import ThreadPool
 
+from logger import initLogging
+
 rq_girl=RedisQueue('dwgirl')
 rq_info=RedisQueue('girlinfo')
 testurl='http://bbs.duowan.com/forum.php?mod=viewthread&tid=43501017&extra=page%3D1%26filter%3Dauthor%26orderby%3Ddateline%26typeid%3D3317%26typeid%3D3317%26orderby%3Ddateline'
 
+initLogging('dwtaskpp.log')
 
 def func():
     # 找到第一篇帖子内容
@@ -54,7 +57,6 @@ def func():
     pics=girlpage.find_all('img',zoomfile=True)
     if len(pics)<1:
         return
-
     id=id[0]
     idinfo_15w= checkid(id)
     if not idinfo_15w:
