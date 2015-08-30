@@ -46,7 +46,6 @@ def func():
                 maxrj=x
         return {'tier_name':maxrj['tier_name'],'area_id':maxrj['area_id'],'area_name':maxrj['area_name'],'palyer':maxrj['player']}
 
-    print(girlurl)
     # 判断是否存在id关键字
     if len(id)<1:
         return

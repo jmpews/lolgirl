@@ -19,11 +19,9 @@ girlurl='http://api.gz.1251328275.cee.myqcloud.com/pic.php?s=m&sort=new&p=1'
 
 lasttime=int(time.time())-3600*24
 while True:
-    print('one loop...')
     r=requests.get(girlurl)
     rjson=json.loads(r.text[1:-1])
     ids=[]
-    print(rjson)
     for x in rjson:
         if x['created_at']<=lasttime:
             break

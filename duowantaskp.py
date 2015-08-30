@@ -31,4 +31,5 @@ while True:
     # urls=[pre_url+x for x in p.findall(r.text)]
     for x in p.findall(r.text):
         rq.put(pre_url+utils.quote_url(x))
+        print(pre_url+utils.quote_url(x))
 print(int(time.time())-t_start)
