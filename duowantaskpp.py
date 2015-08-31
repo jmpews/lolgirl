@@ -95,7 +95,6 @@ def func():
         # 判断是否存在id关键字
         if len(nickname)<1:
             return False
-        print(nickname)
         # 判断有没有照片
         pics=girlpage.find_all('img',zoomfile=True)
 
