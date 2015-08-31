@@ -17,14 +17,12 @@ rq_girl=RedisQueue('dwgirl')
 rq_info=RedisQueue('girlinfo')
 
 testurl='http://bbs.duowan.com/forum.php?mod=viewthread&tid=43589034&extra=page%3D1%26filter%3Dauthor%26orderby%3Ddateline%26typeid%3D3317%26typeid%3D3317%26orderby%3Ddateline'
-testurl='http://bbs.duowan.com/forum.php?mod=viewthread&tid=43589034&extra=page%3D1%26filter%3Dauthor%26orderby%3Ddateline%26typeid%3D3317%26typeid%3D3317%26orderby%3Ddateline'
 loggg=initLogging('dwtaskpp.log')
 
 # 重视模块化
 # 重视模块重用
 def func():
     # 找到第一篇帖子内容
-    testurl='http://bbs.duowan.com/forum.php?mod=viewthread&tid=43589034&extra=page%3D1%26filter%3Dauthor%26orderby%3Ddateline%26typeid%3D3317%26typeid%3D3317%26orderby%3Ddateline'
     # 检查id是否存在
     def checkid(nickname):
     # 1.验证ID是否有效
@@ -81,8 +79,8 @@ def func():
         return {'battletimes':battlelist}
     # 多玩帖子内需要特别判断的函数,比如是否存在ID关键字,以及是否存在图片.
     def duowanfunc():
-        # girlurl=rq_girl.get()
-        r=requests.get(testurl)
+        girlurl=rq_girl.get()
+        r=requests.get(girlurl)
         soup=BeautifulSoup(r.text,"html.parser")
         # girlpage=soup.find('td',id=re.compile('postmessage.*'),attrs={'class':'t_f'})
         girlpage=soup.find('div',attrs={'class':'t_fsz'})
