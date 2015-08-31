@@ -2,7 +2,7 @@ __author__ = 'jmpews'
 
 import re
 import json
-
+import time
 import utils
 
 from bs4 import BeautifulSoup
@@ -36,6 +36,7 @@ def func():
 
     # 检查id是否存在
     def checkid(id):
+        # 1.验证ID是否有效
         qurl='http://x.15w.com/json.php?tn=search&q=%s' % (id)
         try:
             r=requests.get(qurl,timeout=4)
@@ -57,7 +58,33 @@ def func():
                 maxrj=x
             if x['tier']<maxrj['tier']:
                 maxrj=x
-        return {'tier_name':maxrj['tier_name'],'area_id':maxrj['area_id'],'area_name':maxrj['area_name'],'palyer':maxrj['player']}
+
+        # 2.验证ID是否长时间不使用
+        #   查询近期战绩
+        battle='http://x.15w.com/champions/1rihx6n54iggx3pfe6d'
+        try:
+            r=requests.get(battle)
+        except Exception as e:
+            import traceback
+            traceback.print_exc()
+            loggg.error(e)
+            print('================ID 异常======================')
+        p=re.compile(r'"battle_time":(\d+)')
+        battletimes=p.findall(r.text)
+        tmpsum=0
+        battlelist=[]
+        for ti in battletimes:
+            tmpsum+=int(ti)
+            battlelist.append(int(ti))
+        # 判断防止异常
+        if tmpsum==0:
+            return False
+        # 距离上一次玩的平均时间超过1一个月,表明不在活跃
+        inter=int(time.time())-tmpsum/len(battletimes)
+        if inter > 15*3600*24:
+            return False
+
+        return {'tier_name':maxrj['tier_name'],'area_id':maxrj['area_id'],'area_name':maxrj['area_name'],'palyer':maxrj['player'],'battlelist':battlelist}
 
     # 判断是否存在id关键字
     if len(id)<1:
