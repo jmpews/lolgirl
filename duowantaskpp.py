@@ -112,7 +112,6 @@ def func():
         return {'nickname':nickname,'picurls':piclist}
 
 
-
     duowaninfo=duowanfunc()
     if not duowaninfo:
         return
@@ -132,9 +131,9 @@ def func():
 
     print(girlinfo)
     # pickle也可以作序列化
-    # rq_info.put(json.dumps(girlinfo,ensure_ascii=False))
+    rq_info.put(json.dumps(girlinfo,ensure_ascii=False))
 
 # 建立线程池
-# threadpool=ThreadPool(func=func)
-# threadpool.start()
-func()
+threadpool=ThreadPool(func=func)
+threadpool.start()
+# func()
