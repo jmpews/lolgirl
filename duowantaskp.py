@@ -23,7 +23,7 @@ lasttime=0
 lasturl=[]
 while True:
     print('one loop...')
-    i=i-1
+    i=i-1 if i>1 else 1
     requesturl=purl % (i)
     print('=====Page.',i,'=====')
     r=requests.get(requesturl)
