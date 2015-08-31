@@ -18,7 +18,7 @@ purl="http://bbs.duowan.com/forum.php?mod=forumdisplay&fid=1343&orderby=dateline
 t_start=int(time.time())
 rq=RedisQueue('dwgirl')
 
-i=1500
+i=1000
 lasttime=0
 lasturl=[]
 while True:
