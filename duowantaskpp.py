@@ -42,11 +42,11 @@ def func():
         except Exception as e:
             loggg.error(e)
             import traceback
-            traceback.print_exc()
+            # traceback.print_exc()
             print('================ID 异常======================')
             return False
         if r.text.find('code')==-1:
-            return
+            return False
         rj=json.loads(r.text[1:-2])
         if rj['code']==1:
             return False
