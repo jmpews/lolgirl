@@ -3,7 +3,6 @@ __author__ = 'jmpews'
 import re
 import json
 import time
-import utils
 
 from bs4 import BeautifulSoup
 import requests
@@ -12,6 +11,7 @@ from redisq import RedisQueue
 from threadpools import ThreadPool
 
 from logger import initLogging
+import utils
 
 rq_girl=RedisQueue('dwgirl')
 rq_info=RedisQueue('girlinfo')
@@ -23,60 +23,6 @@ loggg=initLogging('dwtaskpp.log')
 # 重视模块重用
 def func():
     # 找到第一篇帖子内容
-    # 检查id是否存在
-    def checkid(nickname):
-    # 1.验证ID是否有效
-        qurl='http://x.15w.com/json.php?tn=search&q=%s' % (nickname)
-        try:
-            r=requests.get(qurl,timeout=4)
-        except Exception as e:
-            loggg.error(e)
-            import traceback
-            # traceback.print_exc()
-            print('================ID 异常======================')
-            return False
-        if r.text.find('code')==-1:
-            return False
-
-        rj=json.loads(r.text[1:-2])
-        if rj['code']==1:
-            return False
-        rjsarray=rj['data']
-        maxrj=rjsarray[0]
-        for x in rjsarray[1:]:
-            if x['level']>maxrj['level']:
-                maxrj=x
-            if x['tier']<maxrj['tier']:
-                maxrj=x
-        return {'tier_name':maxrj['tier_name'],'area_id':maxrj['area_id'],'area_name':maxrj['area_name'],'player':maxrj['player']}
-
-    def overdate(player):
-        # 2.验证ID是否长时间不使用
-        #   查询近期战绩
-        battleurl='http://x.15w.com/battle/%s' % (player)
-        try:
-            r=requests.get(battleurl)
-        except Exception as e:
-            import traceback
-            traceback.print_exc()
-            loggg.error(e)
-            print('================ID 异常======================')
-        p=re.compile(r'"battle_time":(\d+)')
-        battletimes=p.findall(r.text)
-        tmpsum=0
-        battlelist=[]
-        for tmp in battletimes:
-            tmpsum+=int(tmp)
-            battlelist.append(int(tmp))
-        # 判断防止异常
-        if len(battletimes)==0:
-            return False
-        # 距离上一次玩的平均时间超过1一个月,表明不在活跃
-        overtime=int(time.time())-tmpsum/len(battletimes)
-        if overtime > 15*3600*24:
-            print('================ID 过期======================')
-            return False
-        return {'battletimes':battlelist}
     # 多玩帖子内需要特别判断的函数,比如是否存在ID关键字,以及是否存在图片.
     def duowanfunc():
         girlurl=rq_girl.get()
@@ -113,10 +59,10 @@ def func():
     if not duowaninfo:
         return
     # 通用检查id是否存在
-    idinfo_15w= checkid(duowaninfo['nickname'])
+    idinfo_15w= utils.checkid(duowaninfo['nickname'])
     if not idinfo_15w:
         return
-    overinfo=overdate(idinfo_15w['player'])
+    overinfo=utils.overdate(idinfo_15w['player'])
     if not overinfo:
         return
 
