@@ -42,6 +42,7 @@ settings={
     'static_url_prefix':'/cdn/'
 }
 
+tier_name={'不屈白银':'silver','荣耀黄金':'gold','华贵铂金':'platinum'}
 
 application=tornado.web.Application(handlers=handlers,**settings)
 rq=utils.RedisQueue('girlinfo')

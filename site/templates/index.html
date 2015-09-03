@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="cdn/css/normalize.css">
         <link rel="stylesheet" href="cdn/css/font.css">
         <link rel="stylesheet" href="cdn/css/style.css">
+        <link rel="stylesheet" href="cdn/css/hint.css">
     </head>
     <body class="main">
         <div class="header">
@@ -32,7 +33,7 @@
 </div>
 <div class="primary">
     <div class="content">
-        <div class="title" data-clipboard-text="dfasdf" id="testcopy"><h2>最新电影</h2></div>
+        <div class="title" data-clipboard-text="dfasdf" id="testcopy"><h2>Find LoL Girl</h2></div>
         <div class="list">
         <ul>
         {% for x in girls %}
@@ -47,18 +48,19 @@
 	                <div class="stats">        	
 	                    <div class="stats-container">
 	                        <span class="product_price">❤</span>
-	                        <span class="product_name" >ID: {{x[0]}}<img class='copy-id' data-clipboard-text="{{x[0]}}" src="cdn/images/icons/icon_copy.svg" alt="点击复制ID"></span>
-	                        <p>{{x[1]}} {{x[2]}}</p>
+	                        <span class="product_name">ID: {{x[0]}}<img class="copy-id" data-clipboard-text="{{x[0]}}" src="cdn/images/icons/icon_copy.svg" alt="点击复制ID"></span>
+	                        <p>{{x[1]}} <strong class="tier_name">{{x[2]}}</strong></p>
 	                        
 	                        <div class="product-options">
-	                        <strong>SIZES</strong>
-	                        <span>XS, S, M, L, XL, XXL</span>
-	                        <strong>COLORS</strong>
-	                        <div class="colors">
-	                            <div class="c-blue"><span></span></div>
-	                            <div class="c-red"><span></span></div>
-	                            <div class="c-white"><span></span></div>
-	                            <div class="c-green"><span></span></div>
+	                        <strong>上一次游戏时间</strong>
+	                        <span>2015-9-2 18:20</span>
+	                        <strong class="hint--right" data-hint="点下方详情">最近游戏</strong>
+	                        <div class="colors" style="margin-top: 7px;">
+	                            <!--<div class="c-blue hint&#45;&#45;bottom" data-hint="维恩 08-12 19:45"><span></span></div>-->
+	                            <!--<div class="c-red hint&#45;&#45;bottom" data-hint="提莫 08-12 19:45"><span></span></div>-->
+	                            <!--<div class="c-white hint&#45;&#45;bottom" data-hint="08-12 19:45"><span></span></div>-->
+	                            <!--<div class="c-green hint&#45;&#45;bottom" data-hint="08-12 19:45"><span></span></div>-->
+	                            <div class="hint--bottom" data-hint="08-12 19:45"><span></span></div>
 	                        </div>
 	                    </div>                       
 	                    </div>                         
@@ -111,10 +113,10 @@
                         <span>XS, S, M, L, XL, XXL</span>
                         <strong>COLORS</strong>
                         <div class="colors">
-                            <div class="c-blue"><span></span></div>
-                            <div class="c-red"><span></span></div>
-                            <div class="c-white"><span></span></div>
-                            <div class="c-green"><span></span></div>
+                            <div class=""><span></span></div>
+                            <div class=""><span></span></div>
+                            <div class=""><span></span></div>
+                            <div class=""><span></span></div>
                         </div>
                     </div>                       
                     </div>                         
@@ -128,116 +130,6 @@
                         <li><img src="img/3.jpeg" alt=""></li>
                         <li><img src="img/2.jpeg" alt=""></li>
                         <li><img src="img/1.jpeg" alt=""></li>
-                    </ul>
-                    <div class="arrows-perspective">
-                        <div class="carouselPrev">
-                            <div class="y"></div>
-                            <div class="x"></div>
-                        </div>
-                        <div class="carouselNext">
-                            <div class="y"></div>
-                            <div class="x"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="flip-back">
-                    <div class="cy"></div>
-                    <div class="cx"></div>
-                </div>
-            </div>	  
-        </div>	
-    </div>
-    <div class="product">
-        <div class="make3D">
-            <div class="product-front">
-                <div class="shadow"></div>
-                <img src="img/3.jpeg" alt="">
-                <div class="image_overlay"></div>
-                <div class="girldetail">妹纸详细</div>
-                <div class="view_gallery">相 册</div>
-                <div class="stats">        	
-                    <div class="stats-container">
-                        <span class="product_price">❤</span>
-                        <span class="product_name">PRINTED DRESS</span>    
-                        <p>Summer dress</p>                                            
-                        
-                        <div class="product-options">
-                        <strong>SIZES</strong>
-                        <span>XS, S, M, L, XL, XXL</span>
-                        <strong>COLORS</strong>
-                        <div class="colors">
-                            <div class="c-blue"><span></span></div>
-                            <div class="c-red"><span></span></div>
-                            <div class="c-white"><span></span></div>
-                            <div class="c-green"><span></span></div>
-                        </div>
-                    </div>                       
-                    </div>                         
-                </div>
-            </div>
-            
-            <div class="product-back">
-                <div class="shadow"></div>
-                <div class="carousel">
-                    <ul class="carousel-container" rel="0" style="width: 795px;">
-                        <li><img src="img/3.jpeg" alt=""></li>
-                        <li><img src="img/2.jpeg" alt=""></li>
-                        <li><img src="img/1.jpeg" alt=""></li>
-                    </ul>
-                    <div class="arrows-perspective">
-                        <div class="carouselPrev">
-                            <div class="y"></div>
-                            <div class="x"></div>
-                        </div>
-                        <div class="carouselNext">
-                            <div class="y"></div>
-                            <div class="x"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="flip-back">
-                    <div class="cy"></div>
-                    <div class="cx"></div>
-                </div>
-            </div>	  
-        </div>	
-    </div>
-    <div class="product">
-        <div class="make3D">
-            <div class="product-front">
-                <div class="shadow"></div>
-                <img src="img/4.jpeg" alt="">
-                <div class="image_overlay"></div>
-                <div class="girldetail">妹纸详细</div>
-                <div class="view_gallery">相 册</div>
-                <div class="stats">        	
-                    <div class="stats-container">
-                        <span class="product_price">❤</span>
-                        <span class="product_name">PRINTED DRESS</span>    
-                        <p>Summer dress</p>                                            
-                        
-                        <div class="product-options">
-                        <strong>SIZES</strong>
-                        <span>XS, S, M, L, XL, XXL</span>
-                        <strong>COLORS</strong>
-                        <div class="colors">
-                            <div class="c-blue"><span></span></div>
-                            <div class="c-red"><span></span></div>
-                            <div class="c-white"><span></span></div>
-                            <div class="c-green"><span></span></div>
-                        </div>
-                    </div>                       
-                    </div>                         
-                </div>
-            </div>
-            
-            <div class="product-back">
-                <div class="shadow"></div>
-                <div class="carousel">
-                    <ul class="carousel-container" rel="0" style="width: 795px;">
-                        <li><img src="img/1.jpeg" alt=""></li>
-                        <li><img src="img/2.jpeg" alt=""></li>
-                        <li><img src="img/3.jpeg" alt=""></li>
                     </ul>
                     <div class="arrows-perspective">
                         <div class="carouselPrev">
@@ -311,6 +203,23 @@ client.on( "ready", function( readyEvent ) {
     alert("Copied text to clipboard: " + event.data["text/plain"] );
   } );
 } );
+tier_name = new Array();
+tier_name={'不屈白银':'silver','荣耀黄金':'gold','华贵铂金':'platinum'};
+colors={1:'c-blue',2:'c-red',3:'c-red',4:'c-green'};
+$('.tier_name').each(function(){
+   var tier=$(this).text();
+    if(!tier_name[tier]){
+        $(this).addClass('undef')
+    }else{
+        $(this).addClass(tier_name[tier])
+    }
+});
+$('.colors').each(function(){
+    colorint=parseInt(Math.random()*4)+1;
+    $(this).children().each(function(index){
+        $(this).addClass(colors[colorint]);
+    })
+});
 
 </script>   
 </body>

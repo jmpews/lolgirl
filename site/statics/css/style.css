@@ -99,7 +99,7 @@ h1,h2,h3,h4,h5,h6 {
 	width: 80%;
 	/*width:960px;*/
 	margin:0 auto;
-	margin-top:60px;
+	margin-top:30px;
 	min-height:600px;
 }
 
@@ -503,10 +503,19 @@ div.large .make3D{
 	font-size:22px;
 	font-weight:600;
 }
+.stats-container .gold{
+	color: RGB(218,175,115);
+}
+.stats-container .silver{
+	color: RGB(233,233,216);
+}
+.stats-container .platinum{
+	color: RGB(220,220,220);
+}
 .stats-container .copy-id{
     width: 13px;
     margin-left: 10px;
-    /*cursor: pointer;*/
+    cursor: pointer;
 }
 .image_overlay{
 	position:absolute;
