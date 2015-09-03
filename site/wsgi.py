@@ -46,6 +46,6 @@ settings={
 application=tornado.web.Application(handlers=handlers,**settings)
 rq=utils.RedisQueue('girlinfo')
 
-application.listen(9999)
-print('listening 9999...')
+application.listen(8087)
+print('listening 8087...')
 tornado.ioloop.IOLoop.current().start()
