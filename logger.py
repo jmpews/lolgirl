@@ -1,8 +1,8 @@
 __author__ = 'jmpews'
 import logging
 def initLogging(logFilename='run.log'):
-    """Init for logging
-    """
+    """Init for logging"""
+
     # logging.basicConfig(
     #     level = logging.NOTSET,
     #     format = 'LINE %(lineno)-4d  %(levelname)-8s %(message)s',

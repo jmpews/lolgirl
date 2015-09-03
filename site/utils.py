@@ -1,4 +1,5 @@
 __author__ = 'jmpews'
+__author__ = 'jmpews'
 import redis
 
 class RedisQueue(object):
@@ -18,15 +19,3 @@ class RedisQueue(object):
     def put(self,item):
         self.__db.rpush(self.key,item)
 
-    def get(self,block=True,timeout=None):
-        if block:
-            item=self.__db.blpop(self.key,timeout=timeout)
-            item=item[1]
-        else:
-            item=self.__db.lpop(self.key)
-
-        # item=item[1]
-        return item
-
-    def get_notwait(self):
-        return self.get(block=False)
