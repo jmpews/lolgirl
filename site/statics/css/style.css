@@ -42,7 +42,7 @@ h1,h2,h3,h4,h5,h6 {
 	border-bottom:1px solid #f2f2f2
 }
 .header .nav {
-	width:960px;
+	width:100%;
 	margin:0 auto;
 	overflow:hidden
 }
@@ -56,7 +56,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 .header .nav .title a {
 	color:#333;
-	font-size:28px
+	font-size:34px;
 }
 .header .nav .title a:hover {
 	text-decoration:none
