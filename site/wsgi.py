@@ -23,7 +23,7 @@ class MainHandler(tornado.web.RequestHandler):
         print('client come...')
         import random
         t=random.randint(100,4000)
-        girls=rq.qrange(t,t+10)
+        girls=rq.qrange(t,t+11)
         girlslist=[]
         for x in girls:
             girl=json.loads(x.decode())
