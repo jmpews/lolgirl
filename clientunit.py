@@ -7,8 +7,8 @@ messages = ["This is the message" ,
 
 print("Connect to the server")
 
-# server_address = ("112.126.76.80",10001)
-server_address = ("127.0.0.1",9999)
+server_address = ("112.126.76.80",9999)
+# server_address = ("127.0.0.1",9999)
 
 
 sock=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
