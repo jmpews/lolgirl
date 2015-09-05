@@ -54,6 +54,7 @@ def getinfo(nickname,area):
     com_hero=soup.find('ul',id='com-hero')
     if com_hero!=None:
         com_hero=[x['champion-name-ch'] for x in com_hero.findAll('li')]
+    else:
         print('================等级太低======================',nickname)
     # re版本
     # p=re.compile('champion-name-ch="(.+?)"')
