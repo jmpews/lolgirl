@@ -24,7 +24,7 @@ def qqlol():
     url="http://bbs.lol.qq.com/forum.php?mod=forumdisplay&fid=205&typeid=966&typeid=966&filter=typeid&page=%d"
     i=0
     while True:
-        time.sleep(4)
+        time.sleep(1)
         # 计数循环
         i+=1
         i=i%1000
@@ -47,7 +47,7 @@ def duowanlol1():
     url="http://bbs.duowan.com/forum.php?mod=forumdisplay&fid=1343&orderby=dateline&typeid=7092&filter=author&orderby=dateline&typeid=7092&page=%s"
     i=0
     while True:
-        time.sleep(4)
+        time.sleep(1)
         # 计数循环
         i+=1
         i=i%1000
@@ -70,7 +70,7 @@ def duowanlol2():
     url="http://bbs.duowan.com/forum.php?mod=forumdisplay&fid=1343&orderby=dateline&typeid=3317&orderby=dateline&typeid=3317&filter=author&page=%s"
     i=0
     while True:
-        time.sleep(4)
+        time.sleep(1)
         # 计数循环
         i+=1
         i=i%1000

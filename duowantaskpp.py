@@ -79,6 +79,6 @@ def func():
     rq_info.put(json.dumps(id_info,ensure_ascii=False))
 
 # 建立线程池
-# threadpool=ThreadPool(func=func)
-# threadpool.start()
-func()
+threadpool=ThreadPool(func=func)
+threadpool.start()
+# func()
