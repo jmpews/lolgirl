@@ -25,9 +25,11 @@ def getinfo(nickname,area):
     avatar=soup.find('div',attrs={'class':'avatar'})
     # 角色长时间不玩
     if avatar is None:
+        print('================长时间未登录======================')
         return None
     # 角色登记太低
     if int(avatar.em.text)<11:
+        print('================等级太低======================')
         return None
 
     # 最近战斗信息
@@ -50,7 +52,9 @@ def getinfo(nickname,area):
 
     # 常用英雄
     com_hero=soup.find('ul',id='com-hero')
-    com_hero=[x['champion-name-ch'] for x in com_hero.findAll('li')]
+    if com_hero!=None:
+        com_hero=[x['champion-name-ch'] for x in com_hero.findAll('li')]
+        print('================等级太低======================',nickname)
     # re版本
     # p=re.compile('champion-name-ch="(.+?)"')
     # com_hero=p.findall(com_hero.decode())
