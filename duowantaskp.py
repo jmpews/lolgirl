@@ -80,7 +80,6 @@ def duowanlol2():
         p=re.compile('自曝</a>\]</em> <span id="thread_\d+?"><a href="(.+?)"')
         # urls=[pre_url+x for x in p.findall(r.text)]
         urls=p.findall(r.text)
-        print(urls)
         if urls is None:
             continue
         for x in urls:

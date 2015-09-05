@@ -24,9 +24,8 @@ def func():
     # 找到第一篇帖子内容
     # 多玩帖子内需要特别判断的函数,比如是否存在ID关键字,以及是否存在图片.
     def duowanfunc():
-        testurl='http://bbs.lol.qq.com/forum.php?mod=viewthread&tid=2626194&extra=page%3D1%26filter%3Ddateline%26orderby%3Dlastpost%26dateline%3D604800%26typeid%3D966%26dateline%3D604800%26typeid%3D966'
-        # girlurl=rq_girl.get()
-        r=requests.get(testurl)
+        girlurl=rq_girl.get()
+        r=requests.get(girlurl)
         soup=BeautifulSoup(r.text,"html.parser")
         # girlpage=soup.find('td',id=re.compile('postmessage.*'),attrs={'class':'t_f'})
         girlpage=soup.find('div',attrs={'class':'t_fsz'})
