@@ -55,7 +55,7 @@ def getinfo(nickname,area):
     if com_hero!=None:
         com_hero=[x['champion-name-ch'] for x in com_hero.findAll('li')]
     else:
-        print('================等级太低======================',nickname)
+        print('==================英雄:',nickname,'====================')
     # re版本
     # p=re.compile('champion-name-ch="(.+?)"')
     # com_hero=p.findall(com_hero.decode())
@@ -66,6 +66,9 @@ def getinfo(nickname,area):
     r1=requests.get(url.replace('playerDetail','ajaxGetWarzone'))
     r1json=r1.json()
     if r1json['tier']!=None:
+        if r1json['rank']==None:
+            print('===============RANK:',r1json,'=================')
+            r1json['rank']=''
         id_info['warzone']=r1json['tier']+r1json['rank']
     else:
         id_info['warzone']=None
