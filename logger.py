@@ -20,6 +20,6 @@ def initLogging(logFilename='run.log'):
     console.setLevel(logging.NOTSET)
     console.setFormatter(formatter)
 
-    logger.addHandler(console)
+    # logger.addHandler(console)
     logger.addHandler(logfile)
     return logger

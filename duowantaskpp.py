@@ -64,7 +64,7 @@ def func():
     names=duowaninfo['nickname']
     for name in names:
         if len(name.encode('gbk'))<4 or len(name.encode('gbk'))>16:
-            print('=============ID 格式异常========')
+            # print('=============ID 格式异常========')
             return
         tmpinfo=utils.checkid(name)
         if tmpinfo:

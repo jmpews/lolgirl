@@ -25,10 +25,12 @@ def getinfo(nickname,area):
     avatar=soup.find('div',attrs={'class':'avatar'})
     # 角色长时间不玩
     if avatar is None:
+        loggg.error('DATA:'+nickname+area)
         # print('================长时间未登录======================')
         return None
     # 角色登记太低
     if int(avatar.em.text)<11:
+        loggg.error('GRADE:'+nickname+area)
         # print('================等级太低======================')
         return None
 
@@ -36,6 +38,7 @@ def getinfo(nickname,area):
     fighting=soup.find('div',attrs={'class':'fighting'})
     fighting=fighting.find('span').text
     if int(fighting)<1600:
+        loggg.error('FIGHTING:'+nickname+area)
         return None
     id_info['fighting']=int(fighting)
 
@@ -46,7 +49,7 @@ def getinfo(nickname,area):
     matchs=matchlist.findAll('tr')[1:]
     for x in matchs:
         if x.text.find('无相应的比赛记录')!=-1:
-            print('~~~~~~~~~~比赛记录问题排除~~~~~~~~~~')
+            loggg.error('MATCH_LIST'+nickname+area)
             return
         td=x.findAll('td')
         timestr='2015-'+td[3].text.strip()
@@ -57,13 +60,12 @@ def getinfo(nickname,area):
         matchlists.append([td[0].img['title'],td[2].text,times])
 
 
-
     # 常用英雄
     com_hero=soup.find('ul',id='com-hero')
     if com_hero!=None:
         com_hero=[x['champion-name-ch'] for x in com_hero.findAll('li')]
     else:
-        print('==================英雄:',nickname,area,'====================')
+        loggg.error('COM_HERO:'+nickname+area)
     # re版本
     # p=re.compile('champion-name-ch="(.+?)"')
     # com_hero=p.findall(com_hero.decode())
@@ -75,7 +77,7 @@ def getinfo(nickname,area):
     r1json=r1.json()
     if r1json['tier']!=None:
         if r1json['rank']==None:
-            print('===============RANK:',r1json,nickname,area,'=================')
+            loggg.error('RANK:'+nickname+area)
             r1json['rank']=''
         id_info['warzone']=r1json['tier']+r1json['rank']
     else:
