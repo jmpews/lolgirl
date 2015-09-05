@@ -1,5 +1,5 @@
 __author__ = 'jmpews'
-def monitor_redis(rediss=['girlinfo']):
+def monitor_redis(rediss=['girlinfo','dwgirl']):
     import time
     from redisq import RedisQueue
     print('start monitor...')

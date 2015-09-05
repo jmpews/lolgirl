@@ -27,15 +27,15 @@ def qqlol():
         time.sleep(1)
         # 计数循环
         i+=1
-        i=i%1000
-        i=1 if i==0 else i
+        if i==1000:
+            return
         purl=url % i
         r=requests.get(purl)
         p=re.compile('我要曝照</a>\]</em> <a href="(.+?)"')
         # urls=[pre_url+x for x in p.findall(r.text)]
         urls=p.findall(r.text)
         if urls is None:
-            continue
+            return
         for x in urls:
             tmp=pre_url+utils.quote_url(x)
             rq.put(tmp)
@@ -50,15 +50,15 @@ def duowanlol1():
         time.sleep(1)
         # 计数循环
         i+=1
-        i=i%1000
-        i=1 if i==0 else i
+        if i==1000:
+            return
         purl=url % i
         r=requests.get(purl)
         p=re.compile('求封面</a>\]</em> <span id="thread_\d+?"><a href="(.+?)"')
         # urls=[pre_url+x for x in p.findall(r.text)]
         urls=p.findall(r.text)
         if urls is None:
-            continue
+            return
         for x in urls:
             tmp=pre_url+utils.quote_url(x)
             rq.put(tmp)
@@ -73,15 +73,15 @@ def duowanlol2():
         time.sleep(1)
         # 计数循环
         i+=1
-        i=i%1000
-        i=1 if i==0 else i
+        if i==1000:
+            return
         purl=url % i
         r=requests.get(purl)
         p=re.compile('自曝</a>\]</em> <span id="thread_\d+?"><a href="(.+?)"')
         # urls=[pre_url+x for x in p.findall(r.text)]
         urls=p.findall(r.text)
         if urls is None:
-            continue
+            return
         for x in urls:
             tmp=pre_url+utils.quote_url(x)
             with lock:
