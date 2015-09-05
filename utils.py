@@ -25,12 +25,20 @@ def getinfo(nickname,area):
     avatar=soup.find('div',attrs={'class':'avatar'})
     # 角色长时间不玩
     if avatar is None:
-        print('================长时间未登录======================')
+        # print('================长时间未登录======================')
         return None
     # 角色登记太低
     if int(avatar.em.text)<11:
-        print('================等级太低======================')
+        # print('================等级太低======================')
         return None
+
+    # 战斗力,通过战斗力判断角色的选区
+    fighting=soup.find('div',attrs={'class':'fighting'})
+    fighting=fighting.find('span').text
+    if int(fighting)<1600:
+        return None
+    id_info['fighting']=int(fighting)
+
 
     # 最近战斗信息
     matchlists=[]
@@ -46,18 +54,15 @@ def getinfo(nickname,area):
                 return None
             matchlists.append([td[0].img['title'],td[2].text,times])
     except:
-        print('===============MATCHLIST:',nickname,'====================')
-    # 战斗力,通过战斗力判断角色的选区
-    fighting=soup.find('div',attrs={'class':'fighting'})
-    fighting=fighting.find('span').text
-    id_info['fighting']=int(fighting)
+        print('===============MATCHLIST:',nickname,area,'====================')
+
 
     # 常用英雄
     com_hero=soup.find('ul',id='com-hero')
     if com_hero!=None:
         com_hero=[x['champion-name-ch'] for x in com_hero.findAll('li')]
     else:
-        print('==================英雄:',nickname,'====================')
+        print('==================英雄:',nickname,area,'====================')
     # re版本
     # p=re.compile('champion-name-ch="(.+?)"')
     # com_hero=p.findall(com_hero.decode())
@@ -69,7 +74,7 @@ def getinfo(nickname,area):
     r1json=r1.json()
     if r1json['tier']!=None:
         if r1json['rank']==None:
-            print('===============RANK:',r1json,'=================')
+            print('===============RANK:',r1json,nickname,area,'=================')
             r1json['rank']=''
         id_info['warzone']=r1json['tier']+r1json['rank']
     else:
@@ -99,7 +104,7 @@ def checkid(nickname,area=None):
         return False
     if r.text.find('没有找到匹配用户')!=-1:
         loggg.error('ID error:'+nickname)
-        print('================ID 异常======================')
+        # print('================ID 异常======================')
         return False
 
     # 指定大区,但是可能指定错误
