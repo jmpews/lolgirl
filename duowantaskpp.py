@@ -71,6 +71,8 @@ def func():
                 id_info=tmpinfo
     if id_info['fighting']==-1:
         return
+    else:
+        print(id_info)
     id_info['picurls']=duowaninfo['picurls']
     # pickle也可以作序列化
     rq_info.put(json.dumps(id_info,ensure_ascii=False))

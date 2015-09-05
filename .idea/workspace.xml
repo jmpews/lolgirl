@@ -62,8 +62,8 @@
       <file leaf-file-name="duowantaskpp.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/duowantaskpp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5022124">
-              <caret line="72" column="14" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.5685841">
+              <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
               <folding>
                 <element signature="e#23#32#0" expanded="true" />
               </folding>
@@ -534,12 +534,6 @@
       <option name="number" value="Default" />
       <updated>1440871618937</updated>
     </task>
-    <task id="LOCAL-00001" summary="done loldk.com and duowan.com">
-      <created>1440923616385</created>
-      <option name="number" value="00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1440923616386</updated>
-    </task>
     <task id="LOCAL-00002" summary="done loldk.com and duowan.com">
       <created>1440925141502</created>
       <option name="number" value="00002" />
@@ -828,7 +822,13 @@
       <option name="project" value="LOCAL" />
       <updated>1441469062211</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="初步前端界面完成">
+      <created>1441469372418</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1441469372423</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1333,8 +1333,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/duowantaskpp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5022124">
-          <caret line="72" column="14" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.5685841">
+          <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
           <folding>
             <element signature="e#23#32#0" expanded="true" />
           </folding>
