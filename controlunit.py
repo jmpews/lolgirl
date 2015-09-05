@@ -46,6 +46,7 @@ while inputs:
         try:
             # 成功获得一个job
             s.send('success'.encode())
+            outputs.remove(s)
         except queue.Empty as e:
             print(s.getpeername(),'queue empty')
             outputs.remove(s)
