@@ -36,7 +36,6 @@ def func():
         p=re.compile('(?:id|ID)[\s|:|：|;|；]*(\S+)\s*')
         girlpagetext=girlpage.text
         nickname=p.findall(girlpagetext)
-        print(nickname)
 
         # 判断是否存在id关键字
         if len(nickname)<1:
@@ -73,7 +72,6 @@ def func():
     if id_info['fighting']==-1:
         return
     id_info['picurls']=duowaninfo['picurls']
-    print(id_info)
     # pickle也可以作序列化
     rq_info.put(json.dumps(id_info,ensure_ascii=False))
 
