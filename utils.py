@@ -44,17 +44,18 @@ def getinfo(nickname,area):
     matchlists=[]
     matchlist=soup.find('div',attrs={'class':'recent bd-r fl'})
     matchs=matchlist.findAll('tr')[1:]
-    try:
-        for x in matchs:
-            td=x.findAll('td')
-            timestr='2015-'+td[3].text.strip()
-            times=time.mktime(time.strptime(timestr,'%Y-%m-%d %H:%M'))
-            # 距离上次游戏超过一个月
-            if times+30*24*3600<time.time():
-                return None
-            matchlists.append([td[0].img['title'],td[2].text,times])
-    except:
-        print('===============MATCHLIST:',nickname,area,'====================')
+    for x in matchs:
+        if x.text.find('无相应的比赛记录')!=-1:
+            print('~~~~~~~~~~比赛记录问题排除~~~~~~~~~~')
+            return
+        td=x.findAll('td')
+        timestr='2015-'+td[3].text.strip()
+        times=time.mktime(time.strptime(timestr,'%Y-%m-%d %H:%M'))
+        # 距离上次游戏超过一个月
+        if times+30*24*3600<time.time():
+            return None
+        matchlists.append([td[0].img['title'],td[2].text,times])
+
 
 
     # 常用英雄
@@ -100,7 +101,7 @@ def checkid(nickname,area=None):
         loggg.error('查询超时: '+nickname+str(e))
         # import traceback
         # traceback.print_exc()
-        print('================查询超时 异常======================')
+        # print('================查询超时 异常======================')
         return False
     if r.text.find('没有找到匹配用户')!=-1:
         loggg.error('ID error:'+nickname)

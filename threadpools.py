@@ -41,7 +41,7 @@ class Worker(threading.Thread):
                 loggg.error(e)
                 import traceback
                 traceback.print_exc()
-            print('======='+self.name+'Done!=======')
+            print('======='+self.name+'!=======')
 
 # 测试函数
 def test():
