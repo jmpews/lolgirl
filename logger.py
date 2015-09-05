@@ -12,7 +12,7 @@ def initLogging(logFilename='run.log'):
 
     logger=logging.getLogger()
     formatter = logging.Formatter('LINE %(lineno)-4d : %(levelname)-8s %(message)s')
-    logfile=logging.FileHandler(logFilename)
+    logfile=logging.FileHandler(logFilename,encoding='utf8')
     logfile.setLevel(logging.NOTSET)
     logfile.setFormatter(formatter)
 
