@@ -36,15 +36,17 @@ def getinfo(nickname,area):
     matchlists=[]
     matchlist=soup.find('div',attrs={'class':'recent bd-r fl'})
     matchs=matchlist.findAll('tr')[1:]
-    for x in matchs:
-        td=x.findAll('td')
-        timestr='2015-'+td[3].text.strip()
-        times=time.mktime(time.strptime(timestr,'%Y-%m-%d %H:%M'))
-        # 距离上次游戏超过一个月
-        if times+30*24*3600<time.time():
-            return None
-        matchlists.append([td[0].img['title'],td[2].text,times])
-
+    try:
+        for x in matchs:
+            td=x.findAll('td')
+            timestr='2015-'+td[3].text.strip()
+            times=time.mktime(time.strptime(timestr,'%Y-%m-%d %H:%M'))
+            # 距离上次游戏超过一个月
+            if times+30*24*3600<time.time():
+                return None
+            matchlists.append([td[0].img['title'],td[2].text,times])
+    except:
+        print('===============MATCHLIST:',nickname,'====================')
     # 战斗力,通过战斗力判断角色的选区
     fighting=soup.find('div',attrs={'class':'fighting'})
     fighting=fighting.find('span').text
