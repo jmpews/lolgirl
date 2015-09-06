@@ -493,9 +493,12 @@ div.large .make3D{
             transition: all 200ms ease-out; 
 }
 .stats-container .product_name{
-	font-size: 15px;
-    color: #393c45;
+	font-size: 17px;
+    color: #F9319B;
     font-weight: 700;
+}
+.stats-container p .tier-name{
+	margin-left: 7px;
 }
 .stats-container p{
 	font-size:15px;
@@ -552,6 +555,10 @@ div.large .make3D{
 	font-size:14px;
 	display:block;
 	margin-bottom:8px;
+}
+.battletip {
+	margin-top: 7px;
+	font-size: 13px;
 }
 .girldetail{	
 	position:absolute;
@@ -640,6 +647,10 @@ div.colors div span:hover{
 div.c-blue span{background:#6e8cd5;}
 div.c-red span{background:#f56060;}
 div.c-green span{background:#44c28d;}
+
+div.win span{background:#44c28d;}
+div.lose span{background: #a9aca9;}
+
 div.c-white span{
 	background:#fff;
 	width:14px;

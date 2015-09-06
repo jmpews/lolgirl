@@ -41,7 +41,7 @@
 	        <div class="make3D">
 	            <div class="product-front">
 	                <div class="shadow"></div>
-	                <img class="boximg" src="cdn/images/{{x[3]}}.jpeg" alt="">
+	                <img class="boximg" src="cdn/images/nothing.jpeg" alt="">
 	                <div class="image_overlay"></div>
 	                <div class="girldetail">妹纸详细</div>
 	                <div class="view_gallery">相 册</div>
@@ -53,18 +53,19 @@
 	                        
 	                        <div class="product-options">
 	                        <strong>上一次游戏时间</strong>
-	                        <span>2015-9-2 18:20</span>
+	                        <span>{{x[4]}}</span>
 	                        <strong class="hint--right" data-hint="点下方详情">最近游戏</strong>
 	                        <div class="colors" style="margin-top: 7px;">
 	                            <!--<div class="c-blue hint&#45;&#45;bottom" data-hint="维恩 08-12 19:45"><span></span></div>-->
 	                            <!--<div class="c-red hint&#45;&#45;bottom" data-hint="提莫 08-12 19:45"><span></span></div>-->
 	                            <!--<div class="c-white hint&#45;&#45;bottom" data-hint="08-12 19:45"><span></span></div>-->
 	                            <!--<div class="c-green hint&#45;&#45;bottom" data-hint="08-12 19:45"><span></span></div>-->
-	                            <div class="hint--bottom" data-hint="08-12 19:45"><span></span></div>
-	                            <div class="hint--bottom" data-hint="08-12 19:45"><span></span></div>
-	                            <div class="hint--bottom" data-hint="08-12 19:45"><span></span></div>
-	                            <div class="hint--bottom" data-hint="08-12 19:45"><span></span></div>
+                                {% for y in x[3] %}
+                                <div class="battle {{y[1]}}" data-battle="{{y[0]}}"><span></span></div>
+                                {% end %}
 	                        </div>
+                            <div class="clear"></div>
+                            <span class="battletip">暗夜猎手 08-34 09:12</span>
 	                    </div>                       
 	                    </div>                         
 	                </div>
@@ -229,7 +230,13 @@ $('.boximg').each(function(){
     this.src='cdn/images/img'+imgindex+'.jpg';
     imgindex+=1;
 });
+$('.battle').each(function(){
 
+    $(this).mouseover(function(){
+        var strbattle=$(this).attr('data-battle')
+        $('.battletip').text(strbattle)
+    })
+});
 </script>   
 </body>
 </html>

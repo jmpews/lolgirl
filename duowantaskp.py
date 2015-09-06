@@ -13,6 +13,7 @@ from bs4 import BeautifulSoup
 
 # 每类url由一个线程处理,总共有三个线程处理
 # 提交到redis使用with做好线程锁处理,最后想了下发现并不需要锁.
+# 45*1000+37*150
 
 t_start=int(time.time())
 rq=RedisQueue('dwgirl')

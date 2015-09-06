@@ -1,5 +1,4 @@
 __author__ = 'jmpews'
-__author__ = 'jmpews'
 import redis
 
 class RedisQueue(object):

@@ -6,8 +6,8 @@ import tornado.gen
 
 import json
 import utils
-
 import os
+import time
 
 class AsyncMainHandler(tornado.web.RequestHandler):
     @tornado.web.asynchronous
@@ -22,14 +22,20 @@ class MainHandler(tornado.web.RequestHandler):
     def get(self, *args, **kwargs):
         print('client come...')
         import random
-        t=random.randint(100,4000)
+        t=random.randint(1,9000)
         girls=rq.qrange(t,t+11)
         girlslist=[]
+        matchlist=[]
         for x in girls:
             girl=json.loads(x.decode())
-            print(girl)
-            i=random.randint(1,4)
-            girlslist.append([girl['nickname'],girl['area_name'],girl['tier_name'],i])
+            tmp=[]
+            for y in girl['matchlist']:
+                # tmp.append(y[0]+' · '+y[1]+' · '+time.strftime('%m-%d %H:%M',time.localtime(y[2])))
+                classtype='lose' if y[1]=='失败' else 'win'
+                tmp.append([y[0]+' ● '+y[1]+' ● '+time.strftime('%m-%d %H:%M',time.localtime(y[2])),classtype])
+            lastime=girl['matchlist'][0][2]
+            lastime =time.strftime('%Y-%m-%d %H:%M',time.localtime(lastime))
+            girlslist.append([girl['nickname'],girl['area'],girl['warzone'],tmp,lastime])
         self.render('index.html',girls=girlslist)
 
 handlers=[

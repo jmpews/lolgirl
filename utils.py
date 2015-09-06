@@ -55,7 +55,7 @@ def getinfo(nickname,area):
         timestr='2015-'+td[3].text.strip()
         times=time.mktime(time.strptime(timestr,'%Y-%m-%d %H:%M'))
         # 距离上次游戏超过一个月
-        if times+30*24*3600<time.time():
+        if times+30*24*3600<time.time() or times > time.time():
             return None
         matchlists.append([td[0].img['title'],td[2].text,times])
 
