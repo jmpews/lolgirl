@@ -15,6 +15,5 @@ class RedisQueue(object):
     def empty(self):
         return self.qsize()==0
 
-    def put(self,item):
-        self.__db.rpush(self.key,item)
-
+    def index(self,i):
+        return self.__db.lindex(self.key,i)

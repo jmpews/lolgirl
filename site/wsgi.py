@@ -26,6 +26,7 @@ class MainHandler(tornado.web.RequestHandler):
         girls=rq.qrange(t,t+11)
         girlslist=[]
         matchlist=[]
+        girlindex=t
         for x in girls:
             girl=json.loads(x.decode())
             tmp=[]
@@ -35,11 +36,20 @@ class MainHandler(tornado.web.RequestHandler):
                 tmp.append([y[0]+' ● '+y[1]+' ● '+time.strftime('%m-%d %H:%M',time.localtime(y[2])),classtype])
             lastime=girl['matchlist'][0][2]
             lastime =time.strftime('%Y-%m-%d %H:%M',time.localtime(lastime))
-            girlslist.append([girl['nickname'],girl['area'],girl['warzone'],tmp,lastime])
+            girlslist.append([girl['nickname'],girl['area'],girl['warzone'],tmp,lastime,girlindex])
+            girlindex+=1
         self.render('index.html',girls=girlslist)
 
+class ArticalHandler(tornado.web.RequestHandler):
+    def get(self, *args, **kwargs):
+        girlindex=self.get_argument('index')
+        print('artical come...')
+        girl=rq.index(girlindex)
+        girl=json.loads(girl.decode())
+        self.render('article.html',girl=girl)
 handlers=[
-    (r'/',MainHandler)
+    (r'/',MainHandler),
+    (r'/article',ArticalHandler)
 ]
 settings={
     'autoreload':True,

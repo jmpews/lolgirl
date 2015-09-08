@@ -1,21 +1,20 @@
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="keywords" content="LOL妹纸">
-        <meta name="description" content="Cocoa.La">
-        <title>LoL 妹纸</title>
-        <link rel="stylesheet" href="cdn/css/normalize.css">
-        <link rel="stylesheet" href="cdn/css/font.css">
-        <link rel="stylesheet" href="cdn/css/style.css">
-        <link rel="stylesheet" href="cdn/css/hint.css">
-    </head>
-    <body class="main">
-        <div class="header">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="LOL妹纸">
+    <meta name="description" content="Cocoa.La">
+    <title>LoL 妹纸</title>
+    <link rel="stylesheet" href="cdn/css/normalize.css">
+    <link rel="stylesheet" href="cdn/css/font.css">
+    <link rel="stylesheet" href="cdn/css/style.css">
+    <link rel="stylesheet" href="cdn/css/hint.css">
+</head>
+<body class="main">
+<div class="header">
     <div class="nav">
         <div class="title">
-        <h2><a href="/">Find LOL Girl</a></h2>
+            <h2><a href="/">Find LOL Girl</a></h2>
         </div>
         <div class="links">
             <ul>
@@ -25,9 +24,9 @@
             </ul>
         </div>
         <div class="search">
-        <form action="/search/" method="get">
-            <input type="text" name="q" autocomplete="off" placeholder="搜索">
-        </form>
+            <form action="/search/" method="get">
+                <input type="text" name="q" autocomplete="off" placeholder="搜索">
+            </form>
         </div>
     </div>
 </div>
@@ -35,125 +34,75 @@
     <div class="content">
         <div class="title" data-clipboard-text="dfasdf" id="testcopy"><h2>Find LoL Girl</h2></div>
         <div class="list">
-        <ul>
-        {% for x in girls %}
-		<div class="product">
-	        <div class="make3D">
-	            <div class="product-front">
-	                <div class="shadow"></div>
-	                <img class="boximg" src="cdn/images/nothing.jpeg" alt="">
-	                <div class="image_overlay"></div>
-	                <div class="girldetail">妹纸详细</div>
-	                <div class="view_gallery">相 册</div>
-	                <div class="stats">        	
-	                    <div class="stats-container">
-	                        <span class="product_price" style="display:none;">❤</span>
-	                        <span class="product_name">ID: <span>{{x[0]}}</span><img class="copy-id" data-clipboard-text="{{x[0]}}" src="cdn/images/icons/icon_copy.svg" alt="点击复制ID"></span>
-	                        <p>{{x[1]}} <strong class="tier-name">{{x[2]}}</strong></p>
-	                        
-	                        <div class="product-options">
-	                        <strong>上一次游戏时间</strong>
-	                        <span>{{x[4]}}</span>
-	                        <strong class="hint--right" data-hint="点下方详情">最近游戏</strong>
-	                        <div class="colors" style="margin-top: 7px;">
-	                            <!--<div class="c-blue hint&#45;&#45;bottom" data-hint="维恩 08-12 19:45"><span></span></div>-->
-	                            <!--<div class="c-red hint&#45;&#45;bottom" data-hint="提莫 08-12 19:45"><span></span></div>-->
-	                            <!--<div class="c-white hint&#45;&#45;bottom" data-hint="08-12 19:45"><span></span></div>-->
-	                            <!--<div class="c-green hint&#45;&#45;bottom" data-hint="08-12 19:45"><span></span></div>-->
-                                {% for y in x[3] %}
-                                <div class="battle {{y[1]}}" data-battle="{{y[0]}}"><span></span></div>
-                                {% end %}
-	                        </div>
-                            <div class="clear"></div>
-                            <span class="battletip">暗夜猎手 08-34 09:12</span>
-	                    </div>                       
-	                    </div>                         
-	                </div>
-	            </div>
-	            
-	            <div class="product-back">
-	                <div class="shadow"></div>
-	                <div class="carousel">
-	                    <ul class="carousel-container" rel="0" style="width: 795px;">
-	                        <li><img src="cdn/images/2.jpeg" alt=""></li>
-	                        <li><img src="cdn/images/3.jpeg" alt=""></li>
-	                        <li><img src="cdn/images/4.jpeg" alt=""></li>
-	                    </ul>
-	                    <div class="arrows-perspective">
-	                        <div class="carouselPrev">
-	                            <div class="y"></div>
-	                            <div class="x"></div>
-	                        </div>
-	                        <div class="carouselNext">
-	                            <div class="y"></div>
-	                            <div class="x"></div>
-	                        </div>
-	                    </div>
-	                </div>
-	                <div class="flip-back">
-	                    <div class="cy"></div>
-	                    <div class="cx"></div>
-	                </div>
-	            </div>	  
-	        </div>	
-	    </div>
-        {% end %}
-    <div class="product" style="display: none;">
-        <div class="make3D">
-            <div class="product-front">
-                <div class="shadow"></div>
-                <img src="img/3.jpeg" alt="">
-                <div class="image_overlay"></div>
-                <div class="girldetail">妹纸详细</div>
-                <div class="view_gallery">相 册</div>
-                <div class="stats">        	
-                    <div class="stats-container">
-                        <span class="product_price">❤</span>
-                        <span class="product_name">PRINTED DRESS</span>    
-                        <p>Summer dress</p>                                            
-                        
-                        <div class="product-options">
-                        <strong>SIZES</strong>
-                        <span>XS, S, M, L, XL, XXL</span>
-                        <strong>COLORS</strong>
-                        <div class="colors">
-                            <div class=""><span></span></div>
-                            <div class=""><span></span></div>
-                            <div class=""><span></span></div>
-                            <div class=""><span></span></div>
+            <ul>
+                {% for x in girls %}
+                <div class="product">
+                    <div class="make3D">
+                        <div class="product-front">
+                            <div class="shadow"></div>
+                            <img class="boximg" src="cdn/images/nothing.jpeg" alt="">
+
+                            <div class="image_overlay"></div>
+                            <a href="/article?index={{x[5]}}"><div class="girldetail">妹纸详细</div></a>
+                            <!--<div class="view_gallery">相 册</div>-->
+                            <div class="stats">
+                                <div class="stats-container">
+                                    <span class="product_price" style="display:none;">❤</span>
+                                    <span class="product_name">ID: <span>{{x[0]}}</span><img class="copy-id"
+                                                                                             data-clipboard-text="{{x[0]}}"
+                                                                                             src="cdn/images/icons/icon_copy.svg"
+                                                                                             alt="点击复制ID"></span>
+
+                                    <p>{{x[1]}} <strong class="tier-name">{{x[2]}}</strong></p>
+
+                                    <div class="product-options">
+                                        <strong>上一次游戏时间</strong>
+                                        <span>{{x[4]}}</span>
+                                        <strong class="hint--right" data-hint="点下方详情">最近游戏</strong>
+
+                                        <div class="colors" style="margin-top: 7px;">
+                                            <!--<div class="c-blue hint&#45;&#45;bottom" data-hint="维恩 08-12 19:45"><span></span></div>-->
+                                            <!--<div class="c-red hint&#45;&#45;bottom" data-hint="提莫 08-12 19:45"><span></span></div>-->
+                                            <!--<div class="c-white hint&#45;&#45;bottom" data-hint="08-12 19:45"><span></span></div>-->
+                                            <!--<div class="c-green hint&#45;&#45;bottom" data-hint="08-12 19:45"><span></span></div>-->
+                                            {% for y in x[3] %}
+                                            <div class="battle {{y[1]}}" data-battle="{{y[0]}}"><span></span></div>
+                                            {% end %}
+                                        </div>
+                                        <div class="clear"></div>
+                                        <span class="battletip">暗夜猎手 08-34 09:12</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>                       
-                    </div>                         
-                </div>
-            </div>
-            
-            <div class="product-back">
-                <div class="shadow"></div>
-                <div class="carousel">
-                    <ul class="carousel-container" rel="0" style="width: 795px;">
-                        <li><img src="img/3.jpeg" alt=""></li>
-                        <li><img src="img/2.jpeg" alt=""></li>
-                        <li><img src="img/1.jpeg" alt=""></li>
-                    </ul>
-                    <div class="arrows-perspective">
-                        <div class="carouselPrev">
-                            <div class="y"></div>
-                            <div class="x"></div>
-                        </div>
-                        <div class="carouselNext">
-                            <div class="y"></div>
-                            <div class="x"></div>
-                        </div>
+
+                        <!--<div class="product-back">-->
+                            <!--<div class="shadow"></div>-->
+                            <!--<div class="carousel">-->
+                                <!--<ul class="carousel-container" rel="0" style="width: 795px;">-->
+                                    <!--<li><img src="cdn/images/2.jpeg" alt=""></li>-->
+                                    <!--<li><img src="cdn/images/3.jpeg" alt=""></li>-->
+                                    <!--<li><img src="cdn/images/4.jpeg" alt=""></li>-->
+                                <!--</ul>-->
+                                <!--<div class="arrows-perspective">-->
+                                    <!--<div class="carouselPrev">-->
+                                        <!--<div class="y"></div>-->
+                                        <!--<div class="x"></div>-->
+                                    <!--</div>-->
+                                    <!--<div class="carouselNext">-->
+                                        <!--<div class="y"></div>-->
+                                        <!--<div class="x"></div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="flip-back">-->
+                                <!--<div class="cy"></div>-->
+                                <!--<div class="cx"></div>-->
+                            <!--</div>-->
+                        <!--</div>-->
                     </div>
                 </div>
-                <div class="flip-back">
-                    <div class="cy"></div>
-                    <div class="cx"></div>
-                </div>
-            </div>	  
-        </div>	
-    </div>
-
+                {% end %}
             </ul>
         </div>
         <div class="clear"></div>
@@ -179,64 +128,64 @@
         <li>&copy 2015 Cocoa.La</li>
     </ul>
 </div>
-<script src="cdn/js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
 <script src='cdn/js/stopExecutionOnTimeout.js?t=1'></script>
 <script src="cdn/js/layzr.min.js"></script>
 <script src="cdn/js/ZeroClipboard.min.js"></script>
 <script type="text/javascript" src="cdn/js/main.js"></script>
 
 <script>
-var layzr = new Layzr({ 
-  selector: '[data-layzr]', 
-  attr: 'data-layzr', 
-  retinaAttr: 'data-layzr-retina', 
-  threshold: 50, 
-  callback: null 
-});
+    var layzr = new Layzr({
+        selector: '[data-layzr]',
+        attr: 'data-layzr',
+        retinaAttr: 'data-layzr-retina',
+        threshold: 50,
+        callback: null
+    });
 
-var client = new ZeroClipboard( $('.copy-id') );
+    var client = new ZeroClipboard($('.copy-id'));
 
-client.on( "ready", function( readyEvent ) {
-  // alert( "ZeroClipboard SWF is ready!" );
+    client.on("ready", function (readyEvent) {
+        // alert( "ZeroClipboard SWF is ready!" );
 
-  client.on( "aftercopy", function( event ) {
-    // `this` === `client`
-    // `event.target` === the element that was clicked
-    alert("Copied text to clipboard: " + event.data["text/plain"] );
-  } );
-} );
-tier_name = new Array();
-tier_name={'不屈白银':'silver','荣耀黄金':'gold','华贵铂金':'platinum'};
-colors={1:'c-blue',2:'c-red',3:'c-red',4:'c-green'};
-$('.tier_name').each(function(){
-   var tier=$(this).text();
-    if(!tier_name[tier]){
-        $(this).addClass('undef')
-    }else{
-        $(this).addClass(tier_name[tier])
-    }
-});
-$('.colors').each(function(){
-    colorint=parseInt(Math.random()*4)+1;
-    $(this).children().each(function(index){
-        $(this).addClass(colors[colorint]);
-    })
-});
-imgindex=parseInt(Math.random()*9)+1;
-imgindex=(imgindex-1)*12+1;
-console.log('imgindex',imgindex);
-$('.boximg').each(function(){
+        client.on("aftercopy", function (event) {
+            // `this` === `client`
+            // `event.target` === the element that was clicked
+            alert("Copied text to clipboard: " + event.data["text/plain"]);
+        });
+    });
+    tier_name = new Array();
+    tier_name = {'不屈白银': 'silver', '荣耀黄金': 'gold', '华贵铂金': 'platinum'};
+    colors = {1: 'c-blue', 2: 'c-red', 3: 'c-red', 4: 'c-green'};
+    $('.tier_name').each(function () {
+        var tier = $(this).text();
+        if (!tier_name[tier]) {
+            $(this).addClass('undef')
+        } else {
+            $(this).addClass(tier_name[tier])
+        }
+    });
+    $('.colors').each(function () {
+        colorint = parseInt(Math.random() * 4) + 1;
+        $(this).children().each(function (index) {
+            $(this).addClass(colors[colorint]);
+        })
+    });
+    imgindex = parseInt(Math.random() * 9) + 1;
+    imgindex = (imgindex - 1) * 12 + 1;
+    console.log('imgindex', imgindex);
+    $('.boximg').each(function () {
+        $(this).attr('src','cdn/images/img' + imgindex + '.jpg');
+//        this.src = 'cdn/images/img' + imgindex + '.jpg';
+        imgindex += 1;
+    });
+    $('.battle').each(function () {
 
-    this.src='cdn/images/img'+imgindex+'.jpg';
-    imgindex+=1;
-});
-$('.battle').each(function(){
-
-    $(this).mouseover(function(){
-        var strbattle=$(this).attr('data-battle')
-        $('.battletip').text(strbattle)
-    })
-});
-</script>   
+        $(this).mouseover(function () {
+            var strbattle = $(this).attr('data-battle')
+            $('.battletip').text(strbattle)
+        })
+    });
+</script>
 </body>
 </html>
