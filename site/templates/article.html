@@ -31,158 +31,65 @@
     </div>
 </div>
 <div class="primary">
-    <div class="content">
-        <div class="article">
-            <div class="icon">
-                <img alt="SQLPro for MySQL" src="../statics/images/img1.jpg"/>
+    <div class="article">
+        <div class="icon">
+            <img alt="SQLPro for MySQL" src="../statics/images/img1.jpg"/>
+        </div>
+        <div class="intro">
+            <div class="title">
+                <h1>游戏ID: <span>{{girl['nickname']}}</span></h1>
             </div>
-            <div class="intro">
-                <div class="title">
-                    <h1>游戏ID: <span>{{girl['nickname']}}</span></h1>
-                </div>
-                <div class="details">
-                    <span>大区: <span>{{girl['area']}}</span></span>
-                    <span>盒子战斗力: <span>{{girl['fighting']}}</span></span>
-                    <span>段位: <span>荣耀黄金</span></span>
-                    <p>常用英雄: <span>{{girl['com_hero']}}</span></p>
-                    <div class="clear"></div>
-                </div>
-                <div class="download">
-                    <a rel="nofollow" href="/go/sqlpro-for-mysql/" target="_blank">盒子详情</a>
-                </div>
+            <div class="details">
+                <span>大区: <span>{{girl['area']}}</span></span>
+                <span>盒子战斗力: <span>{{girl['fighting']}}</span></span>
+                <span>段位: <span>荣耀黄金</span></span>
+
+                <p>常用英雄: <span>{{' . '.join(girl['com_hero'])}}</span></p>
+
+                <div class="clear"></div>
             </div>
-            <div class="clear"></div>
-            <div class="screenshot">
-                <h2>屏幕截图</h2>
-                <img src="cdn/images/girlpic.jpeg" alt="Screenshot"/>
+            <div class="download">
+                <a rel="nofollow" href="/go/sqlpro-for-mysql/" target="_blank">盒子详情</a>
             </div>
-            <div class="similar" style="display: none;">
-                <h2>相关推荐</h2>
-
-                <div class="similar-c">
-                    <ul>
-                        <li><a href="/coderunner/"><img alt="CodeRunner"
-                                                        src="http://images.macapp.so/icon/coderunner@2x.png?v=2.0.3"/></a>
-                            <h4><a href="/coderunner/">CodeRunner</a></h4></li>
-                        <li><a href="/webcode/"><img alt="WebCode"
-                                                     src="http://images.macapp.so/icon/webcode@2x.png?v=1.1.1"/></a><h4>
-                            <a href="/webcode/">WebCode</a></h4></li>
-                        <li><a href="/icorner-radius/"><img alt="iCorner Radius"
-                                                            src="http://images.macapp.so/icon/icorner-radius@2x.png?v=1.3"/></a>
-                            <h4><a href="/icorner-radius/">iCorner Radius</a></h4></li>
-                        <li><a href="/ssh-tunnel/"><img alt="SSH Tunnel"
-                                                        src="http://images.macapp.so/icon/ssh-tunnel@2x.png?v=15.08"/></a>
-                            <h4><a href="/ssh-tunnel/">SSH Tunnel</a></h4></li>
-                        <li><a href="/subethaedit/"><img alt="SubEthaEdit"
-                                                         src="http://images.macapp.so/icon/subethaedit@2x.png?v=4.0.2"/></a>
-                            <h4><a href="/subethaedit/">SubEthaEdit</a></h4></li>
-                        <li><a href="/macaw/"><img alt="Macaw"
-                                                   src="http://images.macapp.so/icon/macaw@2x.png?v=1.5.15"/></a><h4><a
-                                href="/macaw/">Macaw</a></h4></li>
-                        <li><a href="/vssh/"><img alt="vSSH"
-                                                  src="http://images.macapp.so/icon/vssh@2x.png?v=1.10.2"/></a><h4><a
-                                href="/vssh/">vSSH</a></h4></li>
-                        <li><a href="/synalyze-it-pro/"><img alt="Synalyze It! Pro"
-                                                             src="http://images.macapp.so/icon/synalyze-it-pro@2x.png?v=1.11"/></a>
-                            <h4><a href="/synalyze-it-pro/">Synalyze It! Pro</a></h4></li>
-                    </ul>
-                </div>
+        </div>
+        <div class="clear"></div>
+        <div class="screenshot">
+            <h2>屏幕截图</h2>
+            <img src="cdn/images/girlpic.jpeg" alt="Screenshot"/>
+        </div>
+        <div class="similar" style="display: none;">
+            <h2>相关推荐</h2>
+            <div class="similar-c">
+                <ul>
+                    <li><a href="/coderunner/"><img alt="CodeRunner"
+                                                    src="http://images.macapp.so/icon/coderunner@2x.png?v=2.0.3"/></a>
+                        <h4><a href="/coderunner/">CodeRunner</a></h4></li>
+                    <li><a href="/webcode/"><img alt="WebCode"
+                                                 src="http://images.macapp.so/icon/webcode@2x.png?v=1.1.1"/></a><h4>
+                        <a href="/webcode/">WebCode</a></h4></li>
+                    <li><a href="/icorner-radius/"><img alt="iCorner Radius"
+                                                        src="http://images.macapp.so/icon/icorner-radius@2x.png?v=1.3"/></a>
+                        <h4><a href="/icorner-radius/">iCorner Radius</a></h4></li>
+                    <li><a href="/ssh-tunnel/"><img alt="SSH Tunnel"
+                                                    src="http://images.macapp.so/icon/ssh-tunnel@2x.png?v=15.08"/></a>
+                        <h4><a href="/ssh-tunnel/">SSH Tunnel</a></h4></li>
+                    <li><a href="/subethaedit/"><img alt="SubEthaEdit"
+                                                     src="http://images.macapp.so/icon/subethaedit@2x.png?v=4.0.2"/></a>
+                        <h4><a href="/subethaedit/">SubEthaEdit</a></h4></li>
+                    <li><a href="/macaw/"><img alt="Macaw"
+                                               src="http://images.macapp.so/icon/macaw@2x.png?v=1.5.15"/></a><h4><a
+                            href="/macaw/">Macaw</a></h4></li>
+                    <li><a href="/vssh/"><img alt="vSSH"
+                                              src="http://images.macapp.so/icon/vssh@2x.png?v=1.10.2"/></a><h4><a
+                            href="/vssh/">vSSH</a></h4></li>
+                    <li><a href="/synalyze-it-pro/"><img alt="Synalyze It! Pro"
+                                                         src="http://images.macapp.so/icon/synalyze-it-pro@2x.png?v=1.11"/></a>
+                        <h4><a href="/synalyze-it-pro/">Synalyze It! Pro</a></h4></li>
+                </ul>
             </div>
-            <div class="comment">
-                <h2>用户评论</h2>
+        </div>
+        <div class="comment">
 
-                <div class="ds-thread" data-thread-key="591" data-title="SQLPro for MySQL for Mac - MacApp.So"
-                     data-url="http://www.macapp.so/sqlpro-for-mysql/" id="ds-thread">
-                    <div id="ds-reset">
-                        <div class="ds-comments-info">
-                            <div class="ds-sort">
-                                <a class="ds-order-desc ds-current">最新</a>
-                                <a class="ds-order-asc">最早</a>
-                                <a class="ds-order-hot">最热</a>
-                            </div>
-                            <ul class="ds-comments-tabs">
-                                <li class="ds-tab"><a class="ds-comments-tab-duoshuo ds-current"
-                                                      href="javascript:void(0);">0条评论</a></li>
-                            </ul>
-                        </div>
-                        <ul class="ds-comments">
-                            <li class="ds-post ds-post-placeholder">还没有评论，沙发等你来抢</li>
-                        </ul>
-                        <div class="ds-paginator" style="display: none;">
-                            <div class="ds-border"></div>
-                            <a data-page="1" href="javascript:void(0);" class="ds-current">1</a>
-                        </div>
-                        <a name="respond"></a>
-
-                        <div class="ds-login-buttons">
-                            <p>社交帐号登录:</p>
-
-                            <div class="ds-social-links">
-                                <ul class="ds-service-list">
-                                    <li><a href="http://ligit.duoshuo.com/login/weibo/" rel="nofollow"
-                                           class="ds-service-link ds-weibo">微博</a></li>
-                                    <li><a href="http://ligit.duoshuo.com/login/qq/" rel="nofollow"
-                                           class="ds-service-link ds-qq">QQ</a></li>
-                                    <li><a href="http://ligit.duoshuo.com/login/renren/" rel="nofollow"
-                                           class="ds-service-link ds-renren">人人</a></li>
-                                    <li><a href="http://ligit.duoshuo.com/login/douban/" rel="nofollow"
-                                           class="ds-service-link ds-douban">豆瓣</a></li>
-                                    <li><a class="ds-more-services" href="javascript:void(0)">更多&raquo;</a></li>
-                                </ul>
-                                <ul class="ds-service-list ds-additional-services">
-                                    <li><a href="http://ligit.duoshuo.com/login/kaixin/" rel="nofollow"
-                                           class="ds-service-link ds-kaixin">开心</a></li>
-                                    <li><a href="http://ligit.duoshuo.com/login/netease/" rel="nofollow"
-                                           class="ds-service-link ds-netease">网易</a></li>
-                                    <li><a href="http://ligit.duoshuo.com/login/sohu/" rel="nofollow"
-                                           class="ds-service-link ds-sohu">搜狐</a></li>
-                                    <li><a href="http://ligit.duoshuo.com/login/baidu/" rel="nofollow"
-                                           class="ds-service-link ds-baidu">百度</a></li>
-                                    <li><a href="http://ligit.duoshuo.com/login/google/" rel="nofollow"
-                                           class="ds-service-link ds-google">谷歌</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="ds-replybox">
-                            <a class="ds-avatar" href="javascript:void(0);" onclick="return false"><img
-                                    src="http://static.duoshuo.com/images/noavatar_default.png" alt=""/></a>
-
-                            <form method="post">
-                                <input type="hidden" name="thread_id" value="1408515077111284305"/>
-                                <input type="hidden" name="parent_id" value=""/>
-                                <input type="hidden" name="nonce" value="55d947e09a53f"/>
-
-                                <div class="ds-textarea-wrapper ds-rounded-top">
-                                    <textarea name="message" title="Ctrl+Enter快捷提交" placeholder="说点什么吧…"></textarea>
-                                    <pre class="ds-hidden-text"></pre>
-                                </div>
-                                <div class="ds-post-toolbar">
-                                    <div class="ds-post-options ds-gradient-bg">
-                                        <span class="ds-sync"></span>
-                                    </div>
-                                    <button class="ds-post-button" type="submit">发布</button>
-                                    <div class="ds-toolbar-buttons">
-                                        <a class="ds-toolbar-button ds-add-emote" title="插入表情"></a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <p class="ds-powered-by"><a href="http://duoshuo.com" target="_blank" rel="nofollow">多说</a></p>
-                    </div>
-                </div>
-                <script type="text/javascript">
-                    var duoshuoQuery = {short_name: "ligit"};
-                    (function () {
-                        var ds = document.createElement('script');
-                        ds.type = 'text/javascript';
-                        ds.async = true;
-                        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-                        ds.charset = 'UTF-8';
-                        (document.getElementsByTagName('head')[0]
-                        || document.getElementsByTagName('body')[0]).appendChild(ds);
-                    })();
-                </script>
-            </div>
         </div>
     </div>
     <div class="clear"></div>
@@ -219,7 +126,7 @@
         });
     });
     imgindex = parseInt(Math.random() * 100) + 1;
-    $('.article .icon img').attr('src','cdn/images/img' + imgindex + '.jpg');
+    $('.article .icon img').attr('src', 'cdn/images/img' + imgindex + '.jpg');
 </script>
 </body>
 </html>

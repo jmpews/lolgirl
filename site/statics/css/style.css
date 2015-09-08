@@ -29,7 +29,7 @@ h1,h2,h3,h4,h5,h6 {
 .main {
 	margin:0;
 	padding:0;
-	cursor:default;
+	/*cursor:default;*/
 	background-color:rgba(243, 243, 243, 0.18);
 	/*-webkit-user-select:none;*/
 	-webkit-font-smoothing:antialiased;
@@ -42,7 +42,7 @@ h1,h2,h3,h4,h5,h6 {
 	border-bottom:1px solid #f2f2f2
 }
 .header .nav {
-	width:80%;
+	width: 800px;
 	margin:0 auto;
 	overflow:hidden
 }
@@ -276,11 +276,16 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
-.primary .content .article {
-    margin: 20px 30px
+.primary .article {
+    margin: 0 auto;
+	width: 600px;
+    padding: 30px 80px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 0 3px 2px rgba(200,200,200,0.25);
 }
 
-.primary .content .article h1 {
+.primary .article h1 {
     overflow: hidden;
     color: #333;
     text-overflow: ellipsis;
@@ -289,13 +294,14 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 22px
 }
 
-.primary .content .article h2 {
+.primary .article h2 {
     margin-top: 20px;
     margin-bottom: 12px;
     color: #222;
     font-size: 14px
 }
-.primary .content .article .icon {
+.primary .article .icon {
+	display: none;
     float: left;
     margin: 10px 30px 21px 0;
     width: 200px;
@@ -304,57 +310,57 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 13px
 }
 
-.primary .content .article .icon img {
+.primary .article .icon img {
     width: 200px;
     height: 290px
 }
-.primary .content .article .title{
+.primary .article .title{
 	padding-top: 10px;
     margin-bottom: 20px;
 }
-.primary .content .article .intro {
+.primary .article .intro {
     float: left;
-    margin: 10px 0;
+	padding-top: 20px;
     margin-bottom: 21px;
-    /*width: 600px;*/
+    width: 600px;
     /*height: 128px*/
 }
 
-.primary .content .article .title h1{
+.primary .article .title h1{
     margin-bottom: 12px;
 	color: #FF35A9;
 }
 
-.primary .content .article .details {
+.primary .article .details {
     float: left;
     /*width: 300px;*/
-    height: 290px;
+    /*height: 290px;*/
     color: #797777;
 }
 
-.primary .content .article .details span{
+.primary .article .details span{
 	margin-right: 10px;
 }
 
-.primary .content .article .details span span{
+.primary .article .details span span{
 	color: black;
 }
 
-.primary .content .article .details p{
+.primary .article .details p{
 	margin-top: 17px;
 	font-size: 17px;
 }
-.primary .content .article .details p span{
+.primary .article .details p span{
 	color: black;
 }
-.primary .content .article .download {
+.primary .article .download {
     float: right;
     width: 120px;
     /*height: 93px;*/
     text-align: center
 }
 
-.primary .content .article .download a {
+.primary .article .download a {
     display: block;
     margin: 19px auto;
     margin-bottom: 10px;
@@ -368,7 +374,7 @@ h1,h2,h3,h4,h5,h6 {
     transition: all 200ms ease-in-out
 }
 
-.primary .content .article .download a:hover {
+.primary .article .download a:hover {
     border: 1px solid #2e9fff;
     background-color: #f5fdff;
     color: #2e87e7;
@@ -377,9 +383,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
-.primary .article .screenshot img {
-    width: 580px;
-    min-height: 280px
+.primary .screenshot img {
+    max-width: 600px;
+    min-height: 600px
 }
 
 .product{
@@ -391,7 +397,7 @@ h1,h2,h3,h4,h5,h6 {
     transform-style: preserve-3d;
     transition: transform 5s;
 	float:left; 
-	margin: 0 20px;
+	margin: 5px 20px;
 	-webkit-transition: width 500ms ease-in-out;
 	   -moz-transition: width 500ms ease-in-out;
 		-ms-transition: width 500ms ease-in-out;
