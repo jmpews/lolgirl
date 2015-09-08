@@ -96,7 +96,7 @@ h1,h2,h3,h4,h5,h6 {
 	background-size:15px;
 }
 .primary {
-	width: 80%;
+	/*width: 80%;*/
 	/*width:960px;*/
 	margin:0 auto;
 	margin-top:30px;
@@ -107,19 +107,53 @@ h1,h2,h3,h4,h5,h6 {
 	width: 100%;
 	margin:0 auto;
 	/*width:630px;*/
+	padding: 0 10px;
 	border-radius: 6px;
     background-color: #fff;
     box-shadow: 0 0 3px 2px rgba(200,200,200,0.25);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 317px) {
 	.primary {
-		width: 1200px;
+		/*width: 1200px;*/
 	}
 	.primary .content {
-		width: 1120px;
+		width: 316px;
 	}
 }
+@media screen and (min-width: 613px) {
+	.primary {
+		/*width: 1200px;*/
+	}
+	.primary .content {
+		width: 612px;
+	}
+}
+@media screen and (min-width: 908px) {
+	.primary {
+		/*width: 1200px;*/
+	}
+	.primary .content {
+		width: 612px;
+	}
+}
+@media screen and (min-width: 908px) {
+	.primary {
+		/*width: 1200px;*/
+	}
+	.primary .content {
+		width: 612px;
+	}
+}
+@media screen and (min-width: 1204px) {
+	.primary {
+		/*width: 1200px;*/
+	}
+	.primary .content {
+		width: 1204px;
+	}
+}
+
 .primary .content .title {
 	padding-top:10px;
 	margin-bottom:20px
@@ -357,7 +391,7 @@ h1,h2,h3,h4,h5,h6 {
     transform-style: preserve-3d;
     transition: transform 5s;
 	float:left; 
-	margin-right: 23px;
+	margin: 0 20px;
 	-webkit-transition: width 500ms ease-in-out;
 	   -moz-transition: width 500ms ease-in-out;
 		-ms-transition: width 500ms ease-in-out;
@@ -415,7 +449,7 @@ div.make3D.flip-10{
          -moz-transform: rotateY( -10deg );
            -o-transform: rotateY( -10deg );
               transform: rotateY( -10deg );
-			   transition:  50ms ease-out; 			
+			   transition:  50ms ease-out;
 }
 div.make3D.flip90{
 	 -webkit-transform: rotateY( 90deg );

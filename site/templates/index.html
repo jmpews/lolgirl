@@ -33,78 +33,76 @@
 <div class="primary">
     <div class="content">
         <div class="title" data-clipboard-text="dfasdf" id="testcopy"><h2>Find LoL Girl</h2></div>
-        <div class="list">
-            <ul>
-                {% for x in girls %}
-                <div class="product">
-                    <div class="make3D">
-                        <div class="product-front">
-                            <div class="shadow"></div>
-                            <img class="boximg" src="cdn/images/nothing.jpeg" alt="">
+        {% for x in girls %}
+        <div class="product">
+            <div class="make3D">
+                <div class="product-front">
+                    <div class="shadow"></div>
+                    <img class="boximg" src="cdn/images/nothing.jpeg" alt="">
 
-                            <div class="image_overlay"></div>
-                            <a href="/article?index={{x[5]}}"><div class="girldetail">妹纸详细</div></a>
-                            <!--<div class="view_gallery">相 册</div>-->
-                            <div class="stats">
-                                <div class="stats-container">
-                                    <span class="product_price" style="display:none;">❤</span>
+                    <div class="image_overlay"></div>
+                    <a href="/article?index={{x[5]}}">
+                        <div class="girldetail">妹纸详细</div>
+                    </a>
+                    <!--<div class="view_gallery">相 册</div>-->
+                    <div class="stats">
+                        <div class="stats-container">
+                            <span class="product_price" style="display:none;">❤</span>
                                     <span class="product_name">ID: <span>{{x[0]}}</span><img class="copy-id"
                                                                                              data-clipboard-text="{{x[0]}}"
                                                                                              src="cdn/images/icons/icon_copy.svg"
                                                                                              alt="点击复制ID"></span>
 
-                                    <p>{{x[1]}} <strong class="tier-name">{{x[2]}}</strong></p>
+                            <p>{{x[1]}} <strong class="tier-name">{{x[2]}}</strong></p>
 
-                                    <div class="product-options">
-                                        <strong>上一次游戏时间</strong>
-                                        <span>{{x[4]}}</span>
-                                        <strong class="hint--right" data-hint="点下方详情">最近游戏</strong>
+                            <div class="product-options">
+                                <strong>上一次游戏时间</strong>
+                                <span>{{x[4]}}</span>
+                                <strong class="hint--right" data-hint="点下方详情">最近游戏</strong>
 
-                                        <div class="colors" style="margin-top: 7px;">
-                                            <!--<div class="c-blue hint&#45;&#45;bottom" data-hint="维恩 08-12 19:45"><span></span></div>-->
-                                            <!--<div class="c-red hint&#45;&#45;bottom" data-hint="提莫 08-12 19:45"><span></span></div>-->
-                                            <!--<div class="c-white hint&#45;&#45;bottom" data-hint="08-12 19:45"><span></span></div>-->
-                                            <!--<div class="c-green hint&#45;&#45;bottom" data-hint="08-12 19:45"><span></span></div>-->
-                                            {% for y in x[3] %}
-                                            <div class="battle {{y[1]}}" data-battle="{{y[0]}}"><span></span></div>
-                                            {% end %}
-                                        </div>
-                                        <div class="clear"></div>
-                                        <span class="battletip">暗夜猎手 08-34 09:12</span>
-                                    </div>
+                                <div class="colors" style="margin-top: 7px;">
+                                    <!--<div class="c-blue hint&#45;&#45;bottom" data-hint="维恩 08-12 19:45"><span></span></div>-->
+                                    <!--<div class="c-red hint&#45;&#45;bottom" data-hint="提莫 08-12 19:45"><span></span></div>-->
+                                    <!--<div class="c-white hint&#45;&#45;bottom" data-hint="08-12 19:45"><span></span></div>-->
+                                    <!--<div class="c-green hint&#45;&#45;bottom" data-hint="08-12 19:45"><span></span></div>-->
+                                    {% for y in x[3] %}
+                                    <div class="battle {{y[1]}}" data-battle="{{y[0]}}"><span></span></div>
+                                    {% end %}
                                 </div>
+                                <div class="clear"></div>
+                                <span class="battletip">暗夜猎手 08-34 09:12</span>
                             </div>
                         </div>
-
-                        <!--<div class="product-back">-->
-                            <!--<div class="shadow"></div>-->
-                            <!--<div class="carousel">-->
-                                <!--<ul class="carousel-container" rel="0" style="width: 795px;">-->
-                                    <!--<li><img src="cdn/images/2.jpeg" alt=""></li>-->
-                                    <!--<li><img src="cdn/images/3.jpeg" alt=""></li>-->
-                                    <!--<li><img src="cdn/images/4.jpeg" alt=""></li>-->
-                                <!--</ul>-->
-                                <!--<div class="arrows-perspective">-->
-                                    <!--<div class="carouselPrev">-->
-                                        <!--<div class="y"></div>-->
-                                        <!--<div class="x"></div>-->
-                                    <!--</div>-->
-                                    <!--<div class="carouselNext">-->
-                                        <!--<div class="y"></div>-->
-                                        <!--<div class="x"></div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="flip-back">-->
-                                <!--<div class="cy"></div>-->
-                                <!--<div class="cx"></div>-->
-                            <!--</div>-->
-                        <!--</div>-->
                     </div>
                 </div>
-                {% end %}
-            </ul>
+
+                <!--<div class="product-back">-->
+                <!--<div class="shadow"></div>-->
+                <!--<div class="carousel">-->
+                <!--<ul class="carousel-container" rel="0" style="width: 795px;">-->
+                <!--<li><img src="cdn/images/2.jpeg" alt=""></li>-->
+                <!--<li><img src="cdn/images/3.jpeg" alt=""></li>-->
+                <!--<li><img src="cdn/images/4.jpeg" alt=""></li>-->
+                <!--</ul>-->
+                <!--<div class="arrows-perspective">-->
+                <!--<div class="carouselPrev">-->
+                <!--<div class="y"></div>-->
+                <!--<div class="x"></div>-->
+                <!--</div>-->
+                <!--<div class="carouselNext">-->
+                <!--<div class="y"></div>-->
+                <!--<div class="x"></div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="flip-back">-->
+                <!--<div class="cy"></div>-->
+                <!--<div class="cx"></div>-->
+                <!--</div>-->
+                <!--</div>-->
+            </div>
         </div>
+        {% end %}
         <div class="clear"></div>
         <div class="page-navi">
             <ul>
@@ -175,7 +173,7 @@
     imgindex = (imgindex - 1) * 12 + 1;
     console.log('imgindex', imgindex);
     $('.boximg').each(function () {
-        $(this).attr('src','cdn/images/img' + imgindex + '.jpg');
+        $(this).attr('src', 'cdn/images/img' + imgindex + '.jpg');
 //        this.src = 'cdn/images/img' + imgindex + '.jpg';
         imgindex += 1;
     });
