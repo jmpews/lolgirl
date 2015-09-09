@@ -582,15 +582,18 @@ div.large .make3D{
 	color:#393c45;
 	font-size:14px;
 }
-.product-options span{	
+.product-options .lasttime{
 	color:#969699;
 	font-size:14px;
 	display:block;
 	margin-bottom:8px;
 }
-.battletip {
+.product-options .battletip {
+	color: #6D6A6B;
+    font-size: 13px;
+    display: block;
+    /*margin-bottom: 8px;*/
 	margin-top: 7px;
-	font-size: 13px;
 }
 .girldetail{	
 	position:absolute;
