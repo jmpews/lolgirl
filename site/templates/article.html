@@ -37,7 +37,7 @@
         </div>
         <div class="intro">
             <div class="title">
-                <h1>游戏ID: <span>{{girl['nickname']}}</span></h1>
+                <h1>游戏ID: <span>{{girl['nickname']}}</span>><img class="copy-id" data-clipboard-text="{{girl['nickname']}}" src="cdn/images/icons/icon_copy.svg" alt="点击复制ID"></h1>
             </div>
             <div class="details">
                 <span>大区: <span>{{girl['area']}}</span></span>
@@ -49,7 +49,7 @@
                 <div class="clear"></div>
             </div>
             <div class="download">
-                <a rel="nofollow" href="/go/sqlpro-for-mysql/" target="_blank">盒子详情</a>
+                <a rel="nofollow" href="http://lolbox.duowan.com/playerDetail.php?serverName={{girl['area']}}&playerName={{girl['nickname']}}" target="_blank">盒子详情</a>
             </div>
         </div>
         <div class="clear"></div>

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d3a281b-cad6-4edc-9f1a-1d2b9e0eaedd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/templates/article.html" afterPath="$PROJECT_DIR$/site/templates/article.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/templates/index.html" afterPath="$PROJECT_DIR$/site/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/statics/css/style.css" afterPath="$PROJECT_DIR$/site/statics/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -566,12 +567,6 @@
       <option name="number" value="Default" />
       <updated>1440871618937</updated>
     </task>
-    <task id="LOCAL-00012" summary="done loldk.com and duowan.com">
-      <created>1440998323145</created>
-      <option name="number" value="00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1440998323145</updated>
-    </task>
     <task id="LOCAL-00013" summary="done loldk.com and duowan.com">
       <created>1440999608633</created>
       <option name="number" value="00013" />
@@ -860,7 +855,13 @@
       <option name="project" value="LOCAL" />
       <updated>1441799066177</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="初步前端界面完成">
+      <created>1441810419792</created>
+      <option name="number" value="00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1441810419793</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TodoView">
