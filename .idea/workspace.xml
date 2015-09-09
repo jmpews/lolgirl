@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d3a281b-cad6-4edc-9f1a-1d2b9e0eaedd" name="Default" comment="初步前端界面完成">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dwtaskpp.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/threadpool.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/statics/css/style.css" afterPath="$PROJECT_DIR$/site/statics/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/.idea/workspace.xml" afterPath="$PROJECT_DIR$/site/.idea/workspace.xml" />
@@ -78,8 +75,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/site/statics/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5010482">
-              <caret line="580" column="27" selection-start-line="580" selection-start-column="27" selection-end-line="580" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.31236896">
+              <caret line="574" column="1" selection-start-line="574" selection-start-column="1" selection-end-line="574" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -675,12 +672,6 @@
       <option name="number" value="Default" />
       <updated>1440871618937</updated>
     </task>
-    <task id="LOCAL-00010" summary="done loldk.com and duowan.com">
-      <created>1440953608866</created>
-      <option name="number" value="00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1440953608866</updated>
-    </task>
     <task id="LOCAL-00011" summary="done loldk.com and duowan.com">
       <created>1440991584079</created>
       <option name="number" value="00011" />
@@ -969,7 +960,13 @@
       <option name="project" value="LOCAL" />
       <updated>1441798206649</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="初步前端界面完成">
+      <created>1441798760806</created>
+      <option name="number" value="00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1441798760806</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1311,20 +1308,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/threadpool.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1434,8 +1417,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/site/statics/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5010482">
-          <caret line="580" column="27" selection-start-line="580" selection-start-column="27" selection-end-line="580" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.31236896">
+          <caret line="574" column="1" selection-start-line="574" selection-start-column="1" selection-end-line="574" selection-end-column="1" />
           <folding />
         </state>
       </provider>

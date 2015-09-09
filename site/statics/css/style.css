@@ -117,7 +117,7 @@ h1,h2,h3,h4,h5,h6 {
 	.primary {
 		/*width: 1200px;*/
 	}
-	.header,
+	.header .nav,
 	.primary .content {
 		width: 316px;
 	}
@@ -126,7 +126,7 @@ h1,h2,h3,h4,h5,h6 {
 	.primary {
 		/*width: 1200px;*/
 	}
-	.header,
+	.header .nav,
 	.primary .content {
 		width: 612px;
 	}
@@ -135,7 +135,7 @@ h1,h2,h3,h4,h5,h6 {
 	.primary {
 		/*width: 1200px;*/
 	}
-	.header,
+	.header .nav,
 	.primary .content {
 		width: 908px;
 	}
@@ -144,7 +144,7 @@ h1,h2,h3,h4,h5,h6 {
 	.primary {
 		/*width: 1200px;*/
 	}
-	.header,
+	.header .nav,
 	.primary .content {
 		width: 1204px;
 	}
