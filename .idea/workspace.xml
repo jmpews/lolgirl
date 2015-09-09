@@ -5,7 +5,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dwtaskpp.log" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/threadpool.log" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/templates/index.html" afterPath="$PROJECT_DIR$/site/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/statics/css/style.css" afterPath="$PROJECT_DIR$/site/statics/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site/.idea/workspace.xml" afterPath="$PROJECT_DIR$/site/.idea/workspace.xml" />
@@ -79,8 +78,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/site/statics/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3438155">
-              <caret line="579" column="24" selection-start-line="579" selection-start-column="24" selection-end-line="579" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.5010482">
+              <caret line="580" column="27" selection-start-line="580" selection-start-column="27" selection-end-line="580" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -676,12 +675,6 @@
       <option name="number" value="Default" />
       <updated>1440871618937</updated>
     </task>
-    <task id="LOCAL-00009" summary="done loldk.com and duowan.com">
-      <created>1440941053853</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1440941053853</updated>
-    </task>
     <task id="LOCAL-00010" summary="done loldk.com and duowan.com">
       <created>1440953608866</created>
       <option name="number" value="00010" />
@@ -970,7 +963,13 @@
       <option name="project" value="LOCAL" />
       <updated>1441734974357</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="初步前端界面完成">
+      <created>1441798206649</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1441798206649</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1435,8 +1434,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/site/statics/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3438155">
-          <caret line="579" column="24" selection-start-line="579" selection-start-column="24" selection-end-line="579" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.5010482">
+          <caret line="580" column="27" selection-start-line="580" selection-start-column="27" selection-end-line="580" selection-end-column="27" />
           <folding />
         </state>
       </provider>
