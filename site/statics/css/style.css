@@ -169,8 +169,10 @@ h1,h2,h3,h4,h5,h6 {
 
 
 .page-navi{
+	width: 240px;
     overflow: hidden;
     margin-bottom: 20px;
+	margin: 0 auto;
 }
 .page-navi ul{
 	float: right;
@@ -201,7 +203,11 @@ h1,h2,h3,h4,h5,h6 {
     color: #8b8b8b;
     font-size: 12px;
 }
-
+.page-navi li a:hover {
+    border-color: #43aafa;
+    color: #43aafa;
+    text-decoration: none;
+}
 .primary .chart .title h1 {
 	color:#222;
 	font-size:16px;
